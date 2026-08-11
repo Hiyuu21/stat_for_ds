@@ -6,7 +6,8 @@ library(forecast)
 # -----------------------------
 # Data Loading & Cleaning
 # -----------------------------
-data <- read.csv("EV_Dataset.csv")
+url <- "https://raw.githubusercontent.com/Hiyuu21/stat_for_ds/main/EV_Dataset.csv"
+data <- read.csv(url)
 
 cat("\n--- Data Exploration ---\n")
 cat("Total Rows: ", nrow(data), "\n")
