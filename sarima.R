@@ -6,7 +6,10 @@ library(forecast)
 # Data Loading & Preparation
 # -----------------------------
 # Load the preprocessed time-series objects
-ts_data <- readRDS("ts_data.rds")
+#ts_data <- readRDS("ts_data.rds") used this if github unavailable
+
+url <- gzcon(url("https://raw.githubusercontent.com/Hiyuu21/stat_for_ds/main/ts_data.rds"))
+ts_data <- readRDS(url)
 
 # -----------------------------------------------------------------------
 # SARIMA Function (train/test validation + diagnostics + future forecast)
