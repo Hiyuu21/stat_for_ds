@@ -1,108 +1,26 @@
 library(tidyverse)
-library(lubridate)
 library(tseries)
 library(forecast)
 
 # -----------------------------
-# Data Loading & Cleaning
+# Data Loading & Preparation
 # -----------------------------
-url <- "https://raw.githubusercontent.com/Hiyuu21/stat_for_ds/main/EV_Dataset.csv"
-data <- read.csv(url)
-
-cat("\n--- Data Exploration ---\n")
-cat("Total Rows: ", nrow(data), "\n")
-cat("Total Columns: ", ncol(data), "\n")
-cat("Total Missing Values: ", sum(is.na(data)), "\n")
-cat("Total Duplicated Rows: ", sum(duplicated(data)), "\n")
-cat("Negative Sales Records: ", sum(data$EV_Sales_Quantity < 0), "\n")
-
-# Zero-sales discovery
-zero_sales <- sum(data$EV_Sales_Quantity == 0)
-cat("Zero-Sales Records: ", zero_sales, "(", round(zero_sales/nrow(data)*100,2),"% of raw data )\n")
-
-
-clean_data <- data |>
-  mutate(Date = dmy(Date)) |>
-  filter(Vehicle_Category %in% c("2-Wheelers","3-Wheelers","4-Wheelers")) |>
-  group_by(Date, Vehicle_Category) |>
-  summarise(Total_Sales = sum(EV_Sales_Quantity, na.rm = TRUE), .groups = 'drop') |>
-  arrange(Date)
-
-# -----------------------------
-# Exploratory Data Analysis
-# -----------------------------
-
-# --- 1 Time series line plot: shows trend + seasonality visually
-#     Justification for using SARIMA
-
-ggplot(clean_data, aes(x=Date, y=Total_Sales, color=Vehicle_Category))+
-  geom_line(linewidth=0.8)+
-  theme_minimal() +
-  labs(
-    title = "Monthly EV Sales Trend by Vehicle Category (2014-2024)",
-    x="Date", y="Monthly Sales Quantity", color="Category"
-  )
-
-# --- 2 Check outliers with boxplot method
-
-ggplot(data = clean_data, aes(x=Vehicle_Category, y=Total_Sales, fill = Vehicle_Category)) +
-  geom_boxplot(alpha=0.7, outlier.colour = "red", outlier.size = 2)+
-  theme_minimal()+
-  labs(
-    title="Distribution and Outliers of Monthly EV Sales",
-    subtitle="Highlighting extreme market surges (Red Dots)",
-    x="Vehicle Category",
-    y="Monthly Sales Quantity"
-  ) + 
-  theme(legend.position = "none")
-
-# --- 3 Seasonal decomposition (STL) 
-#     visually separate trend, seasonal, and remainder components per category
-#     supporting evidence for why seasonal terms
-
-for(cat_name in c("2-Wheelers","3-Wheelers","4-Wheelers")){
-  cat_ts <- clean_data |>
-    filter(Vehicle_Category == cat_name) |>
-    pull(Total_Sales) |>
-    ts(start = c(2014,1), frequency = 12)
-  
-  decomp <- stl(cat_ts, s.window = "periodic")
-  plot(decomp, main=paste("STL Decomposition:", cat_name))
-}
-
-# --- 2.4 Descriptive statistics summary 
-
-summary_table <- clean_data |>
-  group_by(Vehicle_Category) |>
-  summarise(
-    Total_Months = n(),
-    Mean_Sales = round(mean(Total_Sales), 2),
-    Median_Sales = median(Total_Sales),
-    Std_Dev = round(sd(Total_Sales), 2),
-    Min_Sales = min(Total_Sales),
-    Max_Sales = max(Total_Sales)
-  )
-
-print(summary_table)
+# Load the preprocessed time-series objects
+ts_data <- readRDS("ts_data.rds")
 
 # -----------------------------------------------------------------------
 # SARIMA Function (train/test validation + diagnostics + future forecast)
 # -----------------------------------------------------------------------
 
-sarima <- function(dataset, cat_name, future_h=12) {
+sarima <- function(cat_name, data_list, future_h=12) {
   cat(paste0("\n======================================================\n"))
   cat(paste0("ANALYZING CATEGORY: ", cat_name, "\n"))
   cat(paste0("======================================================\n"))
   
   # filter and split
-  cat_data <- dataset |> filter(Vehicle_Category == cat_name)
-  train_data <- cat_data |> slice(1:96)
-  test_data <- cat_data |> slice(97:n())
-  
-  full_ts <- ts(cat_data$Total_Sales, start = c(2014,1), frequency = 12)
-  train_ts <- ts(train_data$Total_Sales, start = c(2014,1), frequency = 12)
-  test_ts <- ts(test_data$Total_Sales, start = c(2022,1), frequency = 12)
-  
+  train_ts <- data_list[[cat_name]]$train
+  test_ts  <- data_list[[cat_name]]$test
+  full_ts  <- data_list[[cat_name]]$full
   
   # ---- 1. Stationarity checks ----
   # ADF: null hypothesis = non-stationary (unit root present)
@@ -230,9 +148,12 @@ sarima <- function(dataset, cat_name, future_h=12) {
 # Function Calling
 # -----------------------------
 
-results_2w <- sarima(clean_data, "2-Wheelers")
-results_3w <- sarima(clean_data, "3-Wheelers")
-results_4w <- sarima(clean_data, "4-Wheelers")
+# record results into the log file
+sink("SARIMA_Detailed_Log.txt", split = TRUE)
+
+results_2w <- sarima("2-Wheelers", ts_data)
+results_3w <- sarima("3-Wheelers", ts_data)
+results_4w <- sarima("4-Wheelers", ts_data)
 
 # -------------------------------
 # Cross-category comparison table
@@ -243,8 +164,12 @@ comparison <- bind_rows(
   as.data.frame(t(results_3w$Accuracy["Test set", c("RMSE", "MAE", "MAPE", "Theil's U")])) |>
     mutate(Category = "3-Wheelers"),
   as.data.frame(t(results_4w$Accuracy["Test set", c("RMSE", "MAE", "MAPE", "Theil's U")])) |>
-    mutate(Category = "4-Wheelers"),
+    mutate(Category = "4-Wheelers")
 ) |> relocate(Category)
 
 cat("\nCross-Category Model Performance Comparison\n")
 print(comparison)
+
+sink()
+
+cat("\n--- All details have been saved to 'SARIMA_Detailed_Log.txt' ---\n")

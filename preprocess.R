@@ -7,7 +7,9 @@ library(lubridate)
 
 # ---- 1. Load & clean ----
 
-data <- read.csv("EV_Dataset.csv")
+url <- "https://raw.githubusercontent.com/Hiyuu21/stat_for_ds/main/EV_Dataset.csv"
+data <- read.csv(url)
+#data <- read.csv("EV_Dataset.csv")  use this if github unavailable 
 
 clean_data <- data |>
   mutate(Date = dmy(Date)) |>
@@ -20,7 +22,7 @@ clean_data <- data |>
 # ---- 2. Per-category train/test split  ----
 
 # Using the same split boundary across all four models 
-# to make model-comparison table (MAE/RMSE/MAPE/Theil's U) actually valid to compare
+# to make the model-comparison table (MAE/RMSE/MAPE/Theil's U) valid to compare
 
 split_category <- function(dataset, cat_name, train_n = 96) {
   cat_data <- dataset |> filter(Vehicle_Category == cat_name)
@@ -39,7 +41,7 @@ splits <- setNames(
 
 # ============================================================
 # 3a. ts-object format - for SARIMA, ETS, TBATS
-# These three use the exact same base R ts() object.
+# These three use the same base R ts() object.
 # ============================================================
 make_ts <- function(df, start_year = 2014, start_month = 1, freq = 12) {
   ts(df$Total_Sales, start = c(start_year, start_month), frequency = freq)
@@ -73,9 +75,3 @@ prophet_data <- lapply(splits, function(s) {
 # ---- 4. Save data ----
 saveRDS(ts_data, "ts_data.rds")
 saveRDS(prophet_data, "prophet_data.rds")
-
-cat("Done. Each model should use their respective appropriate object:\n")
-cat(" - SARIMA / ETS / TBATS -> ts_data.rds\n")
-cat("     e.g. ts_data[['2-Wheelers']]$train\n")
-cat(" - Prophet               -> prophet_data.rds\n")
-cat("     e.g. prophet_data[['2-Wheelers']]$train\n")
