@@ -2,6 +2,58 @@ library(tidyverse)
 library(tseries)
 library(forecast)
 
+# =============================================================================
+# IEEE PLOT SETTINGS
+# =============================================================================
+IEEE_W_SINGLE <- 3.5
+IEEE_W_DOUBLE <- 7.16
+IEEE_H        <- 2.8
+IEEE_DPI      <- 300
+
+theme_ieee <- function(base_size = 7) {
+  theme_minimal(base_size = base_size) +
+    theme(
+      text             = element_text(family = "serif", size = base_size),
+      plot.title       = element_text(size = base_size + 1, face = "bold", hjust = 0.5),
+      axis.title       = element_text(size = base_size),
+      axis.text        = element_text(size = base_size - 1),
+      legend.text      = element_text(size = base_size - 1),
+      legend.title     = element_text(size = base_size),
+      strip.text       = element_text(size = base_size, face = "bold"),
+      panel.grid.minor = element_blank(),
+      legend.position  = "bottom"
+    )
+}
+
+# For ggplot objects
+save_ieee <- function(fname, plot, width = IEEE_W_DOUBLE, height = IEEE_H) {
+  ggsave(
+    filename = paste0(fname, ".png"),
+    plot     = plot,
+    width    = width,
+    height   = height,
+    dpi      = IEEE_DPI,
+    units    = "in"
+  )
+  cat("Saved:", paste0(fname, ".png"), "\n")
+}
+
+# For base R graphics (ACF/PACF, checkresiduals)
+save_ieee_base <- function(fname, expr, width = IEEE_W_DOUBLE, height = IEEE_H,
+                           env = parent.frame()) {
+  png(
+    filename  = paste0(fname, ".png"),
+    width     = width,
+    height    = height,
+    units     = "in",
+    res       = IEEE_DPI,
+    pointsize = 7       # matches base_size = 7 in theme_ieee()
+  )
+  eval(expr, envir = env)  # evaluate in caller's env so local vars are visible
+  dev.off()
+  cat("Saved:", paste0(fname, ".png"), "\n")
+}
+
 # -----------------------------
 # Data Loading & Preparation
 # -----------------------------
@@ -56,6 +108,18 @@ sarima <- function(cat_name, data_list, future_h=12) {
   pacf(diff_ts, main = paste("PACF (differenced) -", cat_name))
   par(mfrow = c(1,1))
   
+  # Save ACF/PACF (base R graphic)
+  fname_acfpacf <- paste0(
+    "sarima_01_acfpacf_",
+    gsub("-", "", gsub(" ", "_", tolower(cat_name)))
+  )
+  save_ieee_base(fname_acfpacf, expression({
+    par(mfrow = c(1, 2))
+    acf(diff_ts,  main = paste("ACF (differenced) -",  cat_name))
+    pacf(diff_ts, main = paste("PACF (differenced) -", cat_name))
+    par(mfrow = c(1, 1))
+  }))
+  
   # ---- 3. Model fitting (auto.arima, AICc-driven search) ----
   cat("\n2. Fitting SARIMA Model...\n")
   model <- auto.arima(
@@ -78,6 +142,15 @@ sarima <- function(cat_name, data_list, future_h=12) {
   cat("\n3. Residual Diagnostics (Ljung-Box test):\n")
   print(checkresiduals(model, plot = TRUE))
   
+  # Save residual diagnostics (base R graphic — checkresiduals uses base plots)
+  fname_resid <- paste0(
+    "sarima_02_residuals_",
+    gsub("-", "", gsub(" ", "_", tolower(cat_name)))
+  )
+  save_ieee_base(fname_resid, expression({
+    checkresiduals(model, plot = TRUE)
+  }), height = 3.5)  # slightly taller to fit the 3-panel layout
+  
   
   # ---- 5. Forecast on held-out test set + evaluation ----  
   fc <-  forecast(model, h=length(test_ts))
@@ -87,24 +160,29 @@ sarima <- function(cat_name, data_list, future_h=12) {
   cat("\n--- Full Accuracy Matrix ---\n")
   print(eval)
   
-  cat("\n--- Target Test Metrics (MAE, RMSE, MAPE, Theil's U) ---\n")
+  cat("\n--- Target Test Metrics (MAE, RMSE, MASE, Theil's U, ME) ---\n")
   if ("Test set" %in% rownames(eval)) {
-    print(eval["Test set", c("RMSE", "MAE", "MAPE","Theil's U")])
+    print(eval["Test set", c("RMSE", "MAE", "MASE","Theil's U","ME")])
   } else {
     cat("WARNING: 'Test set' row is missing from the accuracy matrix!\n")
   }
   
   p_test <- autoplot(fc) +
-    autolayer(test_ts, series = "Actual Test Data", linewidth = 1)+
-    theme_minimal()+
+    autolayer(test_ts, series = "Actual Test Data", linewidth = 0.7) +
+    theme_ieee() +
     labs(
-      title=paste("SARIMA Forecast vs Actual (Test Set):",cat_name),
-      x="Year",
-      y="Sales Quantity"
-    ) + 
-    theme(legend.position = "bottom")
+      title = paste("SARIMA Forecast vs Actual (Test Set):", cat_name),
+      x     = "Year",
+      y     = "Sales Quantity (units)"
+    )
   
   print(p_test)
+  
+  fname_test <- paste0(
+    "sarima_03_testforecast_",
+    gsub("-", "", gsub(" ", "_", tolower(cat_name)))
+  )
+  save_ieee(fname_test, p_test, width = IEEE_W_DOUBLE, height = IEEE_H)
   
   
   # ---- 6. Refit on FULL data + forecast forward ----
@@ -126,13 +204,20 @@ sarima <- function(cat_name, data_list, future_h=12) {
   print(future_fc)
   
   p_future <- autoplot(future_fc) +
-    theme_minimal() + 
+    theme_ieee() +
     labs(
       title = paste("SARIMA Future Forecast (next", future_h, "months):", cat_name),
-      x="Year", y="Sales Quantity"
-    ) +
-    theme(legend.position="bottom")
+      x     = "Year",
+      y     = "Sales Quantity (units)"
+    )
+  
   print(p_future)
+  
+  fname_future <- paste0(
+    "sarima_04_futureforecast_",
+    gsub("-", "", gsub(" ", "_", tolower(cat_name)))
+  )
+  save_ieee(fname_future, p_future, width = IEEE_W_DOUBLE, height = IEEE_H)
   
   
   
@@ -162,11 +247,11 @@ results_4w <- sarima("4-Wheelers", ts_data)
 # Cross-category comparison table
 # -------------------------------
 comparison <- bind_rows(
-  as.data.frame(t(results_2w$Accuracy["Test set", c("RMSE", "MAE", "MAPE", "Theil's U")])) |>
+  as.data.frame(t(results_2w$Accuracy["Test set", c("RMSE", "MAE", "MASE", "Theil's U","ME")])) |>
     mutate(Category = "2-Wheelers"),
-  as.data.frame(t(results_3w$Accuracy["Test set", c("RMSE", "MAE", "MAPE", "Theil's U")])) |>
+  as.data.frame(t(results_3w$Accuracy["Test set", c("RMSE", "MAE", "MASE", "Theil's U","ME")])) |>
     mutate(Category = "3-Wheelers"),
-  as.data.frame(t(results_4w$Accuracy["Test set", c("RMSE", "MAE", "MAPE", "Theil's U")])) |>
+  as.data.frame(t(results_4w$Accuracy["Test set", c("RMSE", "MAE", "MASE", "Theil's U","ME")])) |>
     mutate(Category = "4-Wheelers")
 ) |> relocate(Category)
 
