@@ -77,7 +77,7 @@ sarima <- function(cat_name, data_list, future_h=12) {
   test_ts  <- data_list[[cat_name]]$test
   full_ts  <- data_list[[cat_name]]$full
   
-  # ---- 1. Stationarity checks ----
+  # ---- 1a. Stationarity checks ----
   # ADF: null hypothesis = non-stationary (unit root present)
   # KPSS: null hypothesis = stationary (opposite direction)
   # Using both protects against relying on a single test's assumptions.
@@ -95,6 +95,25 @@ sarima <- function(cat_name, data_list, future_h=12) {
   cat("   Suggested non-seasonal differencing (d):", d_order, "\n")
   cat("   Suggested seasonal differencing (D)    :", D_order, "\n")
   
+  # ---- 1b. ACF/PACF on RAW (pre-differencing) series ----
+  # Purpose: visual counterpart to the ADF/KPSS numbers above.
+  # A slowly-decaying ACF here is the classic visual signature of
+  # non-stationarity, matching what the tests already concluded.
+  par(mfrow = c(1,2))
+  acf(train_ts,  main = paste("ACF (raw) -",  cat_name))
+  pacf(train_ts, main = paste("PACF (raw) -", cat_name))
+  par(mfrow = c(1,1))
+  
+  fname_acfpacf_raw <- paste0(
+    "sarima_00_acfpacf_raw_",
+    gsub("-", "", gsub(" ", "_", tolower(cat_name)))
+  )
+  save_ieee_base(fname_acfpacf_raw, expression({
+    par(mfrow = c(1, 2))
+    acf(train_ts,  main = paste("ACF (raw) -",  cat_name))
+    pacf(train_ts, main = paste("PACF (raw) -", cat_name))
+    par(mfrow = c(1, 1))
+  }))
   
   # ---- 2. ACF/PACF for order identification ----
   # Plotted on the (seasonally) differenced series
@@ -142,7 +161,7 @@ sarima <- function(cat_name, data_list, future_h=12) {
   cat("\n3. Residual Diagnostics (Ljung-Box test):\n")
   print(checkresiduals(model, plot = TRUE))
   
-  # Save residual diagnostics (base R graphic — checkresiduals uses base plots)
+  # Save residual diagnostics (base R graphic — check residuals uses base plots)
   fname_resid <- paste0(
     "sarima_02_residuals_",
     gsub("-", "", gsub(" ", "_", tolower(cat_name)))
