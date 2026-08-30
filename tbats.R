@@ -54,12 +54,12 @@ tbats_analysis <- function(cat_name, data_list, future_h=12) {
   full_ts  <- data_list[[cat_name]]$full
   
   # ---- 1. Fit TBATS model ----
-  cat("\n1. Fitting TBATS Model...\n")
+  cat("\n1. Fitting TBATS Model\n")
   model <- tbats(train_ts)
   print(model)
   
   # ---- 2. Decomposition ----
-  cat("\n2. Inspecting Decomposition...\n")
+  cat("\n2. Inspecting Decomposition\n")
   decomp <- tbats.components(model)
   p_decomp <- autoplot(decomp) +
     theme_ieee() +
@@ -68,11 +68,11 @@ tbats_analysis <- function(cat_name, data_list, future_h=12) {
   save_ieee(paste0("tbats_decomp_", gsub(" ", "_", tolower(cat_name))), p_decomp)
   
   # ---- 3. Residual Diagnostics ----
-  cat("\n3. Residual Diagnostics...\n")
+  cat("\n3. Residual Diagnostics\n")
   checkresiduals(model, plot = TRUE)
   
   # ---- 4. Forecast on Test Set ----
-  cat("\n4. Forecasting on Test Set...\n")
+  cat("\n4. Forecasting on Test Set\n")
   fc <- forecast(model, h = length(test_ts))
   eval <- accuracy(fc, test_ts)
   print(eval)
@@ -86,7 +86,7 @@ tbats_analysis <- function(cat_name, data_list, future_h=12) {
   save_ieee(paste0("tbats_testforecast_", gsub(" ", "_", tolower(cat_name))), p_test)
   
   # ---- 5. Refit on Full Data + Future Forecast ----
-  cat("\n5. Future Forecast...\n")
+  cat("\n5. Future Forecast\n")
   final_model <- tbats(full_ts)
   future_fc   <- forecast(final_model, h = future_h)
   print(future_fc)
@@ -126,5 +126,6 @@ comparison <- bind_rows(
     mutate(Category = "4-Wheelers")
 ) %>% relocate(Category)
 
-cat("\nCross-Category TBATS Model Performance Comparison\n")
+cat("\n=================================================\nCross-Category TBATS Model Performance Comparison\n=================================================\n")
 print(comparison)
+
