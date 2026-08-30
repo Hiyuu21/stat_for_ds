@@ -1,0 +1,203 @@
+======================================================
+ANALYZING CATEGORY: 2-Wheelers 
+======================================================
+
+1. Fitting TBATS Model
+TBATS(0, {0,0}, -, {<12,4>})
+
+Call: tbats(y = train_ts)
+
+Parameters
+  Lambda: 0
+  Alpha: 0.7107146
+  Gamma-1 Values: 1.6997e-05
+  Gamma-2 Values: -0.0003739227
+
+Seed States:
+             [,1]
+ [1,]  4.94143725
+ [2,]  0.14156189
+ [3,]  0.02708150
+ [4,] -0.18832567
+ [5,] -0.04707603
+ [6,] -0.21465336
+ [7,]  0.02787154
+ [8,]  0.02871941
+ [9,] -0.13911199
+attr(,"lambda")
+[1] 3.207692e-07
+
+Sigma: 0.489162
+AIC: 1540.028
+
+2. Inspecting Decomposition
+Saved: tbats_decomp_2-wheelers.png 
+
+3. Residual Diagnostics
+
+	Ljung-Box test
+
+data:  Residuals from TBATS
+Q* = 14.21, df = 19, p-value = 0.7713
+
+Model df: 0.   Total lags used: 19
+
+
+4. Forecasting on Test Set
+                     ME      RMSE        MAE       MPE     MAPE
+Training set   387.5896  1510.923   601.7109 -16.47849 45.83043
+Test set     43621.7405 46868.610 43621.7405  67.46866 67.46866
+                   MASE      ACF1 Theil's U
+Training set  0.2862094 0.4999721        NA
+Test set     20.7490852 0.3242366  3.011804
+Saved: tbats_testforecast_2-wheelers.png 
+
+5. Future Forecast
+         Point Forecast    Lo 80    Hi 80     Lo 95    Hi 95
+Feb 2024       87534.55 51392.86 147994.0 38649.228 194851.7
+Mar 2024       81398.67 43027.25 152370.2 30567.764 211461.3
+Apr 2024       63671.56 30242.29 132139.5 20269.422 193393.8
+May 2024       58114.04 24973.71 132759.2 15846.880 204111.3
+Jun 2024       68354.87 27102.76 168628.3 16454.702 269648.6
+Jul 2024       76962.10 28423.27 203130.5 16594.714 336201.2
+Aug 2024       72125.34 24758.79 204021.4 13883.283 349782.4
+Sep 2024       70492.58 22597.20 212715.5 12199.866 376837.1
+Oct 2024       79861.43 24172.12 254364.4 12640.759 463105.6
+Nov 2024       85298.21 24406.30 286396.9 12370.122 535496.4
+Dec 2024       79880.26 21512.56 283844.3 10541.172 546091.7
+Jan 2025       80045.76 20435.64 298966.1  9718.788 589774.2
+Saved: tbats_futureforecast_2-wheelers.png 
+
+
+======================================================
+ANALYZING CATEGORY: 3-Wheelers 
+======================================================
+
+1. Fitting TBATS Model
+BATS(1, {0,0}, -, -)
+
+Call: tbats(y = train_ts)
+
+Parameters
+  Alpha: 1.345498
+
+Seed States:
+         [,1]
+[1,] 571.0621
+
+Sigma: 1989.999
+AIC: 1900.588
+
+2. Inspecting Decomposition
+Saved: tbats_decomp_3-wheelers.png 
+
+3. Residual Diagnostics
+
+	Ljung-Box test
+
+data:  Residuals from TBATS
+Q* = 30.997, df = 19, p-value = 0.0404
+
+Model df: 0.   Total lags used: 19
+
+
+4. Forecasting on Test Set
+                     ME      RMSE       MAE      MPE     MAPE      MASE
+Training set   197.6029  1989.999  1219.672      NaN      Inf 0.3761641
+Test set     13433.4802 18259.951 15048.840 26.06348 33.86026 4.6412760
+                    ACF1 Theil's U
+Training set -0.07173935        NA
+Test set      0.87009803  3.248809
+Saved: tbats_testforecast_3-wheelers.png 
+
+5. Future Forecast
+         Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95
+Feb 2024       54788.78 51902.06 57675.50 50373.92 59203.64
+Mar 2024       56678.04 52829.02 60527.06 50791.48 62564.60
+Apr 2024       54747.01 50118.13 59375.89 47667.75 61826.27
+May 2024       54697.04 49399.95 59994.14 46595.84 62798.25
+Jun 2024       58401.58 52519.04 64284.11 49405.02 67398.14
+Jul 2024       60311.68 53918.70 66704.67 50534.45 70088.91
+Aug 2024       61520.09 54652.69 68387.49 51017.30 72022.88
+Sep 2024       63432.91 56117.35 70748.48 52244.72 74621.11
+Oct 2024       63992.94 56275.55 71710.33 52190.21 75795.66
+Nov 2024       65099.65 57001.59 73197.71 52714.74 77484.57
+Dec 2024       66057.42 57586.95 74527.89 53102.95 79011.88
+Jan 2025       65187.67 56382.06 73993.29 51720.65 78654.70
+Saved: tbats_futureforecast_3-wheelers.png 
+
+
+======================================================
+ANALYZING CATEGORY: 4-Wheelers 
+======================================================
+
+1. Fitting TBATS Model
+BATS(0.308, {0,1}, 1, -)
+
+Call: tbats(y = train_ts)
+
+Parameters
+  Lambda: 0.308311
+  Alpha: 0.01277088
+  Beta: 0.05713542
+  Damping Parameter: 1
+  MA coefficients: 0.399218
+
+Seed States:
+          [,1]
+[1,] 5.2044824
+[2,] 0.1037651
+[3,] 0.0000000
+attr(,"lambda")
+[1] 0.3083109
+
+Sigma: 2.394634
+AIC: 1254.405
+
+2. Inspecting Decomposition
+Saved: tbats_decomp_4-wheelers.png 
+
+3. Residual Diagnostics
+
+	Ljung-Box test
+
+data:  Residuals from TBATS
+Q* = 15.205, df = 19, p-value = 0.7095
+
+Model df: 0.   Total lags used: 19
+
+
+4. Forecasting on Test Set
+                      ME      RMSE        MAE        MPE      MAPE
+Training set    24.96268  137.9737   65.78471 -102.19137 130.62154
+Test set     -2383.57072 3665.9193 2622.87936  -39.94737  45.51229
+                   MASE      ACF1 Theil's U
+Training set  0.3952164 0.1392686        NA
+Test set     15.7575359 0.7933904  2.050342
+Saved: tbats_testforecast_4-wheelers.png 
+
+5. Future Forecast
+         Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95
+Feb 2024       8369.608 6600.935 10466.01 5785.270 11720.96
+Mar 2024       8538.881 6607.619 10858.31 5727.047 12259.27
+Apr 2024       8685.647 6722.596 11042.91 5827.417 12466.59
+May 2024       8827.320 6819.986 11240.75 5905.600 12699.57
+Jun 2024       8963.992 6893.876 11460.80 5953.484 12973.25
+Jul 2024       9095.764 6940.105 11709.94 5965.499 13299.32
+Aug 2024       9222.739 6956.557 11992.72 5939.053 13685.79
+Sep 2024       9345.029 6943.120 12311.41 5874.475 14137.10
+Oct 2024       9462.748 6901.322 12666.36 5774.464 14654.67
+Nov 2024       9576.013 6833.803 13056.59 5643.282 15237.83
+Dec 2024       9684.944 6743.777 13480.31 5485.959 15884.61
+Jan 2025       9789.664 6634.618 13935.38 5307.658 16592.45
+Saved: tbats_futureforecast_4-wheelers.png 
+
+
+=================================================
+Cross-Category TBATS Model Performance Comparison
+=================================================
+
+    Category      RMSE       MAE      MASE Theil's U        ME
+1 2-Wheelers 46868.610 43621.741 20.749085  3.011804 43621.741
+2 3-Wheelers 18259.951 15048.840  4.641276  3.248809 13433.480
+3 4-Wheelers  3665.919  2622.879 15.757536  2.050342 -2383.571
