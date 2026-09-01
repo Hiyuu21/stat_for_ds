@@ -128,10 +128,8 @@ sigma^2 = 1772159:  log likelihood = -810.85
 AIC=1633.7   AICc=1634.66   BIC=1648.96
 
 Training set error measures:
-                   ME     RMSE      MAE       MPE
-Training set 150.4115 1281.772 621.9995 0.6244995
-                 MAPE      MASE       ACF1
-Training set 36.27429 0.2958598 -0.1150847
+                   ME     RMSE      MAE       MPE     MAPE      MASE       ACF1
+Training set 150.4115 1281.772 621.9995 0.6244995 36.27429 0.2958598 -0.1150847
 
 3. Residual Diagnostics (Ljung-Box test):
 
@@ -161,50 +159,24 @@ Saved: sarima_02_residuals_2wheelers.png
 4. Forecasting and Evaluation on Test Set
 
 --- Full Accuracy Matrix ---
-                      ME      RMSE        MAE
-Training set    150.4115  1281.772   621.9995
-Test set     -14267.8421 29056.763 21525.7550
-                     MPE     MAPE       MASE
-Training set   0.6244995 36.27429  0.2958598
-Test set     -21.5821688 33.71155 10.2389249
-                   ACF1 Theil's U
-Training set -0.1150847        NA
-Test set      0.6958969  1.809222
-
---- Target Test Metrics (MAE, RMSE, MASE, Theil's U, ME) ---
-         RMSE           MAE          MASE 
- 29056.763150  21525.755038     10.238925 
-    Theil's U            ME 
-     1.809222 -14267.842068 
+      RMSE      MAE    MASE Theils_U        ME
+1 29056.76 21525.76 10.2389   0.5495 -14267.84
 Saved: sarima_03_testforecast_2wheelers.png 
 
 5. Future Forecast (next 12 months beyond dataset):
-         Point Forecast    Lo 80     Hi 80    Lo 95
-Feb 2024       79900.48 70994.73  88806.22 66280.31
-Mar 2024       89278.26 79694.06  98862.46 74620.49
-Apr 2024       81999.57 70962.80  93036.34 65120.29
-May 2024       98460.21 86590.05 110330.37 80306.37
-Jun 2024       74950.03 62259.84  87640.22 55542.06
-Jul 2024       79103.81 65603.47  92604.14 58456.83
-Aug 2024       83228.23 68924.98  97531.49 61353.29
-Sep 2024       84497.69 69396.65  99598.72 61402.65
-Oct 2024       89681.11 73785.78 105576.44 65371.30
-Nov 2024       97205.49 80518.01 113892.97 71684.19
-Dec 2024       91535.62 74057.04 109014.21 64804.44
-Jan 2025       94669.53 76399.99 112939.07 66728.68
-             Hi 95
-Feb 2024  93520.64
-Mar 2024 103936.03
-Apr 2024  98878.85
-May 2024 116614.05
-Jun 2024  94358.00
-Jul 2024  99750.79
-Aug 2024 105103.17
-Sep 2024 107592.73
-Oct 2024 113990.92
-Nov 2024 122726.79
-Dec 2024 118266.81
-Jan 2025 122610.38
+         Point Forecast    Lo 80     Hi 80    Lo 95     Hi 95
+Feb 2024       79900.48 70994.73  88806.22 66280.31  93520.64
+Mar 2024       89278.26 79694.06  98862.46 74620.49 103936.03
+Apr 2024       81999.57 70962.80  93036.34 65120.29  98878.85
+May 2024       98460.21 86590.05 110330.37 80306.37 116614.05
+Jun 2024       74950.03 62259.84  87640.22 55542.06  94358.00
+Jul 2024       79103.81 65603.47  92604.14 58456.83  99750.79
+Aug 2024       83228.23 68924.98  97531.49 61353.29 105103.17
+Sep 2024       84497.69 69396.65  99598.72 61402.65 107592.73
+Oct 2024       89681.11 73785.78 105576.44 65371.30 113990.92
+Nov 2024       97205.49 80518.01 113892.97 71684.19 122726.79
+Dec 2024       91535.62 74057.04 109014.21 64804.44 118266.81
+Jan 2025       94669.53 76399.99 112939.07 66728.68 122610.38
 Saved: sarima_04_futureforecast_2wheelers.png 
 
 ======================================================
@@ -463,13 +435,8 @@ Saved: sarima_02_residuals_3wheelers.png
 4. Forecasting and Evaluation on Test Set
 
 --- Full Accuracy Matrix ---
-                     ME      RMSE       MAE      MPE     MAPE      MASE        ACF1 Theil's U
-Training set   216.0395  1808.769  1107.733      NaN      Inf 0.3416407 -0.01174362        NA
-Test set     11606.1545 15191.495 12612.487 23.59288 28.57837 3.8898700  0.84337710  2.749427
-
---- Target Test Metrics (MAE, RMSE, MASE, Theil's U, ME) ---
-        RMSE          MAE         MASE    Theil's U           ME 
-15191.494569 12612.486706     3.889870     2.749427 11606.154487 
+      RMSE      MAE   MASE Theils_U       ME
+1 15191.49 12612.49 3.8899   0.5286 11606.15
 Saved: sarima_03_testforecast_3wheelers.png 
 
 5. Future Forecast (next 12 months beyond dataset):
@@ -648,13 +615,8 @@ Saved: sarima_02_residuals_4wheelers.png
 4. Forecasting and Evaluation on Test Set
 
 --- Full Accuracy Matrix ---
-                      ME      RMSE        MAE        MPE      MAPE       MASE       ACF1 Theil's U
-Training set    14.07452  121.1549   74.05341 -137.67400 179.03950  0.4448925 -0.1570766        NA
-Test set     -2028.19980 2516.3587 2149.20850  -42.27574  44.24884 12.9118520  0.6204816  1.679161
-
---- Target Test Metrics (MAE, RMSE, MASE, Theil's U, ME) ---
-        RMSE          MAE         MASE    Theil's U           ME 
- 2516.358720  2149.208505    12.911852     1.679161 -2028.199804 
+      RMSE      MAE    MASE Theils_U      ME
+1 2516.359 2149.209 12.9119   0.5579 -2028.2
 Saved: sarima_03_testforecast_4wheelers.png 
 
 5. Future Forecast (next 12 months beyond dataset):
@@ -673,8 +635,8 @@ Dec 2024      14484.009  9962.694 19005.325  7569.254 21398.765
 Jan 2025      15272.679 10223.603 20321.755  7550.783 22994.575
 Saved: sarima_04_futureforecast_4wheelers.png 
 
-Cross-Category Model Performance Comparison
-    Category      RMSE       MAE     MASE Theil's U        ME
-1 2-Wheelers 29056.763 21525.755 10.23892  1.809222 -14267.84
-2 3-Wheelers 15191.495 12612.487  3.88987  2.749427  11606.15
-3 4-Wheelers  2516.359  2149.209 12.91185  1.679161  -2028.20
+Cross-Category Model Performance Comparison (SARIMA)
+    Category      RMSE       MAE    MASE Theils_U        ME  Model
+1 2-Wheelers 29056.763 21525.755 10.2389   0.5495 -14267.84 SARIMA
+2 3-Wheelers 15191.495 12612.487  3.8899   0.5286  11606.15 SARIMA
+3 4-Wheelers  2516.359  2149.209 12.9119   0.5579  -2028.20 SARIMA

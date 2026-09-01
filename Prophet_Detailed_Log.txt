@@ -4,8 +4,8 @@ ANALYZING CATEGORY: 2-Wheelers
 =========================================
 
 --- Test Set Metrics ---
-      RMSE      MAE    MASE Theils_U       ME
-1 48671.98 46068.34 21.9128   0.9204 46068.34
+     RMSE      MAE    MASE Theils_U       ME
+1 34990.2 32112.28 15.2745   0.6617 32112.28
 Saved: prophet_01_testforecast_2wheelers.png 
 Saved: prophet_02_futureforecast_2wheelers.png 
 
@@ -14,8 +14,8 @@ ANALYZING CATEGORY: 3-Wheelers
 =========================================
 
 --- Test Set Metrics ---
-      RMSE      MAE   MASE Theils_U       ME
-1 26134.37 23732.31 7.3194   0.9093 23732.31
+     RMSE      MAE   MASE Theils_U       ME
+1 20365.7 18251.72 5.6291   0.7086 18251.72
 Saved: prophet_01_testforecast_3wheelers.png 
 Saved: prophet_02_futureforecast_3wheelers.png 
 
@@ -24,17 +24,13 @@ ANALYZING CATEGORY: 4-Wheelers
 =========================================
 
 --- Test Set Metrics ---
-     RMSE      MAE    MASE Theils_U       ME
-1 3537.69 3054.614 18.3513   0.7843 3054.614
+      RMSE      MAE    MASE Theils_U       ME
+1 3171.365 2679.153 16.0956   0.7031 2678.886
 Saved: prophet_01_testforecast_4wheelers.png 
 Saved: prophet_02_futureforecast_4wheelers.png 
 
 --- Cross-Category Model Performance Comparison (Prophet) ---
-    Category     RMSE       MAE    MASE Theils_U
-1 2-Wheelers 48671.98 46068.338 21.9128   0.9204
-2 3-Wheelers 26134.37 23732.311  7.3194   0.9093
-3 4-Wheelers  3537.69  3054.614 18.3513   0.7843
-         ME
-1 46068.338
-2 23732.311
-3  3054.614
+    Category      RMSE       MAE    MASE Theils_U        ME   Model
+1 2-Wheelers 34990.198 32112.281 15.2745   0.6617 32112.281 Prophet
+2 3-Wheelers 20365.697 18251.723  5.6291   0.7086 18251.723 Prophet
+3 4-Wheelers  3171.365  2679.153 16.0956   0.7031  2678.886 Prophet

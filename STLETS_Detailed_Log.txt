@@ -20,14 +20,14 @@ ANALYZING CATEGORY: 2-Wheelers
        24.03      2373.22    148.32       2474.50
    %   1.0         95.9       6.0         100.0  
 
- Weights:
+ Weights from 15 robustness iterations:
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
  0.0000  0.0000  0.9452  0.5524  0.9905  1.0000 
 
  Other components: List of 5
- $ win  : Named num [1:3] 961 19 13
+ $ win  : Named int [1:3] 961 19 13
  $ deg  : Named int [1:3] 0 1 1
- $ jump : Named num [1:3] 97 2 2
+ $ jump : Named int [1:3] 97 2 2
  $ inner: int 1
  $ outer: int 15
  Call:
@@ -183,16 +183,12 @@ Saved: stlets_02_residuals_2wheelers.png
 4. Forecasting and Evaluation on Test Set
 
 --- Full Accuracy Matrix ---
-                     ME      RMSE        MAE       MPE     MAPE       MASE
-Training set   373.9629  1885.722   839.1445 -32.46733 62.86911  0.3991469
-Test set     23507.8405 27253.915 23507.8405  34.72950 34.72950 11.1817222
-                  ACF1 Theil's U
-Training set 0.4747732        NA
-Test set     0.1321870  1.755951
+      RMSE      MAE    MASE Theils_U       ME
+1 27253.91 23507.84 11.1817   0.5154 23507.84
 
---- Target Test Metrics (MAE, RMSE, MASE, Theil's U, ME) ---
-        RMSE          MAE         MASE    Theil's U           ME 
-27253.914751 23507.840521    11.181722     1.755951 23507.840521 
+--- Target Test Metrics (RMSE, MAE, MASE, Theil's U, ME) ---
+      RMSE      MAE    MASE Theils_U       ME
+1 27253.91 23507.84 11.1817   0.5154 23507.84
 Saved: stlets_03_testforecast_2wheelers.png 
 
 5. Refitting STL+ETS on Full Dataset and Forecasting Future...
@@ -234,14 +230,14 @@ ANALYZING CATEGORY: 3-Wheelers
       809.4       8148.4    1779.1        9057.0
    %   8.9         90.0      19.6         100.0 
 
- Weights:
+ Weights from 15 robustness iterations:
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
  0.0000  0.8774  0.9452  0.8538  0.9916  1.0000 
 
  Other components: List of 5
- $ win  : Named num [1:3] 961 19 13
+ $ win  : Named int [1:3] 961 19 13
  $ deg  : Named int [1:3] 0 1 1
- $ jump : Named num [1:3] 97 2 2
+ $ jump : Named int [1:3] 97 2 2
  $ inner: int 1
  $ outer: int 15
  Call:
@@ -397,16 +393,12 @@ Saved: stlets_02_residuals_3wheelers.png
 4. Forecasting and Evaluation on Test Set
 
 --- Full Accuracy Matrix ---
-                   ME      RMSE       MAE      MPE     MAPE      MASE      ACF1
-Training set   238.24  1940.632  1207.496      NaN      Inf 0.3724089 0.1752097
-Test set     16174.54 20233.703 16795.323 34.04371 37.18706 5.1799162 0.8714031
-             Theil's U
-Training set        NA
-Test set      3.645475
+     RMSE      MAE   MASE Theils_U       ME
+1 20233.7 16795.32 5.1799    0.704 16174.54
 
---- Target Test Metrics (MAE, RMSE, MASE, Theil's U, ME) ---
-        RMSE          MAE         MASE    Theil's U           ME 
-20233.703184 16795.323371     5.179916     3.645475 16174.536300 
+--- Target Test Metrics (RMSE, MAE, MASE, Theil's U, ME) ---
+     RMSE      MAE   MASE Theils_U       ME
+1 20233.7 16795.32 5.1799    0.704 16174.54
 Saved: stlets_03_testforecast_3wheelers.png 
 
 5. Refitting STL+ETS on Full Dataset and Forecasting Future...
@@ -448,14 +440,14 @@ ANALYZING CATEGORY: 4-Wheelers
       11.11       175.16     37.92        160.75
    %   6.9        109.0      23.6         100.0 
 
- Weights:
+ Weights from 15 robustness iterations:
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
  0.0000  0.6780  0.9452  0.7575  0.9909  1.0000 
 
  Other components: List of 5
- $ win  : Named num [1:3] 961 19 13
+ $ win  : Named int [1:3] 961 19 13
  $ deg  : Named int [1:3] 0 1 1
- $ jump : Named num [1:3] 97 2 2
+ $ jump : Named int [1:3] 97 2 2
  $ inner: int 1
  $ outer: int 15
  Call:
@@ -611,16 +603,12 @@ Saved: stlets_02_residuals_4wheelers.png
 4. Forecasting and Evaluation on Test Set
 
 --- Full Accuracy Matrix ---
-                    ME      RMSE        MAE        MPE      MAPE       MASE
-Training set   37.5735  168.7923   81.54907 -128.22009 157.88329  0.4899243
-Test set     2034.5910 2586.2633 2064.40852   32.99987  34.92358 12.4023970
-                  ACF1 Theil's U
-Training set 0.3206289        NA
-Test set     0.6384678  1.600154
+      RMSE      MAE    MASE Theils_U       ME
+1 2586.263 2064.409 12.4024   0.5734 2034.591
 
---- Target Test Metrics (MAE, RMSE, MASE, Theil's U, ME) ---
-       RMSE         MAE        MASE   Theil's U          ME 
-2586.263251 2064.408518   12.402397    1.600154 2034.591018 
+--- Target Test Metrics (RMSE, MAE, MASE, Theil's U, ME) ---
+      RMSE      MAE    MASE Theils_U       ME
+1 2586.263 2064.409 12.4024   0.5734 2034.591
 Saved: stlets_03_testforecast_4wheelers.png 
 
 5. Refitting STL+ETS on Full Dataset and Forecasting Future...
@@ -642,7 +630,7 @@ Jan 2025      10016.127 8379.036 11653.219 7512.412 12519.842
 Saved: stlets_04_futureforecast_4wheelers.png 
 
 Cross-Category Model Performance Comparison (STL + ETS)
-    Category      RMSE       MAE      MASE Theil's U        ME
-1 2-Wheelers 27253.915 23507.841 11.181722  1.755951 23507.841
-2 3-Wheelers 20233.703 16795.323  5.179916  3.645475 16174.536
-3 4-Wheelers  2586.263  2064.409 12.402397  1.600154  2034.591
+    Category      RMSE       MAE    MASE Theils_U        ME   Model
+1 2-Wheelers 27253.915 23507.840 11.1817   0.5154 23507.840 STL+ETS
+2 3-Wheelers 20233.703 16795.323  5.1799   0.7040 16174.536 STL+ETS
+3 4-Wheelers  2586.263  2064.409 12.4024   0.5734  2034.591 STL+ETS

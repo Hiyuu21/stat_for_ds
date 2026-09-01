@@ -1,3 +1,4 @@
+
 ======================================================
 ANALYZING CATEGORY: 2-Wheelers 
 ======================================================
@@ -31,7 +32,7 @@ Sigma: 0.489162
 AIC: 1540.028
 
 2. Inspecting Decomposition
-Saved: tbats_decomp_2-wheelers.png 
+Saved: tbats_01_decomposition_2wheelers.png 
 
 3. Residual Diagnostics
 
@@ -43,14 +44,25 @@ Q* = 14.21, df = 19, p-value = 0.7713
 Model df: 0.   Total lags used: 19
 
 
+	Ljung-Box test
+
+data:  Residuals from TBATS
+Q* = 14.21, df = 19, p-value = 0.7713
+
+
+	Ljung-Box test
+
+data:  Residuals from TBATS
+Q* = 14.21, df = 19, p-value = 0.7713
+
+Model df: 0.   Total lags used: 19
+
+Saved: tbats_02_residuals_2wheelers.png 
+
 4. Forecasting on Test Set
-                     ME      RMSE        MAE       MPE     MAPE
-Training set   387.5896  1510.923   601.7109 -16.47849 45.83043
-Test set     43621.7405 46868.610 43621.7405  67.46866 67.46866
-                   MASE      ACF1 Theil's U
-Training set  0.2862094 0.4999721        NA
-Test set     20.7490852 0.3242366  3.011804
-Saved: tbats_testforecast_2-wheelers.png 
+      RMSE      MAE    MASE Theils_U       ME
+1 46868.61 43621.74 20.7491   0.8863 43621.74
+Saved: tbats_03_testforecast_2wheelers.png 
 
 5. Future Forecast
          Point Forecast    Lo 80    Hi 80     Lo 95    Hi 95
@@ -66,8 +78,7 @@ Oct 2024       79861.43 24172.12 254364.4 12640.759 463105.6
 Nov 2024       85298.21 24406.30 286396.9 12370.122 535496.4
 Dec 2024       79880.26 21512.56 283844.3 10541.172 546091.7
 Jan 2025       80045.76 20435.64 298966.1  9718.788 589774.2
-Saved: tbats_futureforecast_2-wheelers.png 
-
+Saved: tbats_04_futureforecast_2wheelers.png 
 
 ======================================================
 ANALYZING CATEGORY: 3-Wheelers 
@@ -89,7 +100,7 @@ Sigma: 1989.999
 AIC: 1900.588
 
 2. Inspecting Decomposition
-Saved: tbats_decomp_3-wheelers.png 
+Saved: tbats_01_decomposition_3wheelers.png 
 
 3. Residual Diagnostics
 
@@ -101,14 +112,25 @@ Q* = 30.997, df = 19, p-value = 0.0404
 Model df: 0.   Total lags used: 19
 
 
+	Ljung-Box test
+
+data:  Residuals from TBATS
+Q* = 30.997, df = 19, p-value = 0.0404
+
+
+	Ljung-Box test
+
+data:  Residuals from TBATS
+Q* = 30.997, df = 19, p-value = 0.0404
+
+Model df: 0.   Total lags used: 19
+
+Saved: tbats_02_residuals_3wheelers.png 
+
 4. Forecasting on Test Set
-                     ME      RMSE       MAE      MPE     MAPE      MASE
-Training set   197.6029  1989.999  1219.672      NaN      Inf 0.3761641
-Test set     13433.4802 18259.951 15048.840 26.06348 33.86026 4.6412760
-                    ACF1 Theil's U
-Training set -0.07173935        NA
-Test set      0.87009803  3.248809
-Saved: tbats_testforecast_3-wheelers.png 
+      RMSE      MAE   MASE Theils_U       ME
+1 18259.95 15048.84 4.6413   0.6353 13433.48
+Saved: tbats_03_testforecast_3wheelers.png 
 
 5. Future Forecast
          Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95
@@ -124,8 +146,7 @@ Oct 2024       63992.94 56275.55 71710.33 52190.21 75795.66
 Nov 2024       65099.65 57001.59 73197.71 52714.74 77484.57
 Dec 2024       66057.42 57586.95 74527.89 53102.95 79011.88
 Jan 2025       65187.67 56382.06 73993.29 51720.65 78654.70
-Saved: tbats_futureforecast_3-wheelers.png 
-
+Saved: tbats_04_futureforecast_3wheelers.png 
 
 ======================================================
 ANALYZING CATEGORY: 4-Wheelers 
@@ -155,7 +176,7 @@ Sigma: 2.394634
 AIC: 1254.405
 
 2. Inspecting Decomposition
-Saved: tbats_decomp_4-wheelers.png 
+Saved: tbats_01_decomposition_4wheelers.png 
 
 3. Residual Diagnostics
 
@@ -167,14 +188,25 @@ Q* = 15.205, df = 19, p-value = 0.7095
 Model df: 0.   Total lags used: 19
 
 
+	Ljung-Box test
+
+data:  Residuals from TBATS
+Q* = 15.205, df = 19, p-value = 0.7095
+
+
+	Ljung-Box test
+
+data:  Residuals from TBATS
+Q* = 15.205, df = 19, p-value = 0.7095
+
+Model df: 0.   Total lags used: 19
+
+Saved: tbats_02_residuals_4wheelers.png 
+
 4. Forecasting on Test Set
-                      ME      RMSE        MAE        MPE      MAPE
-Training set    24.96268  137.9737   65.78471 -102.19137 130.62154
-Test set     -2383.57072 3665.9193 2622.87936  -39.94737  45.51229
-                   MASE      ACF1 Theil's U
-Training set  0.3952164 0.1392686        NA
-Test set     15.7575359 0.7933904  2.050342
-Saved: tbats_testforecast_4-wheelers.png 
+      RMSE      MAE    MASE Theils_U        ME
+1 3665.919 2622.879 15.7575   0.8128 -2383.571
+Saved: tbats_03_testforecast_4wheelers.png 
 
 5. Future Forecast
          Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95
@@ -190,14 +222,12 @@ Oct 2024       9462.748 6901.322 12666.36 5774.464 14654.67
 Nov 2024       9576.013 6833.803 13056.59 5643.282 15237.83
 Dec 2024       9684.944 6743.777 13480.31 5485.959 15884.61
 Jan 2025       9789.664 6634.618 13935.38 5307.658 16592.45
-Saved: tbats_futureforecast_4-wheelers.png 
-
+Saved: tbats_04_futureforecast_4wheelers.png 
 
 =================================================
 Cross-Category TBATS Model Performance Comparison
 =================================================
-
-    Category      RMSE       MAE      MASE Theil's U        ME
-1 2-Wheelers 46868.610 43621.741 20.749085  3.011804 43621.741
-2 3-Wheelers 18259.951 15048.840  4.641276  3.248809 13433.480
-3 4-Wheelers  3665.919  2622.879 15.757536  2.050342 -2383.571
+    Category      RMSE       MAE    MASE Theils_U        ME Model
+1 2-Wheelers 46868.610 43621.740 20.7491   0.8863 43621.740 TBATS
+2 3-Wheelers 18259.951 15048.840  4.6413   0.6353 13433.480 TBATS
+3 4-Wheelers  3665.919  2622.879 15.7575   0.8128 -2383.571 TBATS
