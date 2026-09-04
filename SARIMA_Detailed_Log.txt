@@ -1,123 +1,211 @@
 
 ======================================================
-ANALYZING CATEGORY: 2-Wheelers
+ANALYZING CATEGORY (SARIMA): 2-Wheelers
 ======================================================
 
-1. Stationarity Tests on Raw Training Data:
-   ADF p-value : 0.99 ->  Non-stationary 
-   KPSS p-value: 0.01 ->  Non-stationary 
-   Suggested non-seasonal differencing (d): 2 
-   Suggested seasonal differencing (D)    : 0 
-Saved: sarima_00_acfpacf_raw_2wheelers.png 
-Saved: sarima_01_acfpacf_2wheelers.png 
+1. Fitting SARIMA Model...
 
-2. Fitting SARIMA Model...
+ ARIMA(0,0,0)            with zero mean     : 1708.419
+ ARIMA(0,0,0)            with non-zero mean : 1710.496
+ ARIMA(0,0,0)(0,0,1)[12] with zero mean     : 1706.704
+ ARIMA(0,0,0)(0,0,1)[12] with non-zero mean : 1708.83
+ ARIMA(0,0,0)(0,0,2)[12] with zero mean     : 1695.107
+ ARIMA(0,0,0)(0,0,2)[12] with non-zero mean : 1697.275
+ ARIMA(0,0,0)(1,0,0)[12] with zero mean     : 1701.617
+ ARIMA(0,0,0)(1,0,0)[12] with non-zero mean : 1703.745
+ ARIMA(0,0,0)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,0)(1,0,1)[12] with non-zero mean : Inf
+ ARIMA(0,0,0)(1,0,2)[12] with zero mean     : 1695.263
+ ARIMA(0,0,0)(1,0,2)[12] with non-zero mean : 1697.483
+ ARIMA(0,0,0)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(0,0,0)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(0,0,0)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,0)(2,0,1)[12] with non-zero mean : Inf
+ ARIMA(0,0,0)(2,0,2)[12] with zero mean     : Inf
+ ARIMA(0,0,0)(2,0,2)[12] with non-zero mean : Inf
+ ARIMA(0,0,1)            with zero mean     : 1666.059
+ ARIMA(0,0,1)            with non-zero mean : 1666.556
+ ARIMA(0,0,1)(0,0,1)[12] with zero mean     : 1664.503
+ ARIMA(0,0,1)(0,0,1)[12] with non-zero mean : 1665.105
+ ARIMA(0,0,1)(0,0,2)[12] with zero mean     : 1657.492
+ ARIMA(0,0,1)(0,0,2)[12] with non-zero mean : 1658.642
+ ARIMA(0,0,1)(1,0,0)[12] with zero mean     : 1659.983
+ ARIMA(0,0,1)(1,0,0)[12] with non-zero mean : 1660.936
+ ARIMA(0,0,1)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,1)(1,0,1)[12] with non-zero mean : 1661.136
+ ARIMA(0,0,1)(1,0,2)[12] with zero mean     : Inf
+ ARIMA(0,0,1)(1,0,2)[12] with non-zero mean : Inf
+ ARIMA(0,0,1)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(0,0,1)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(0,0,1)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,1)(2,0,1)[12] with non-zero mean : 1660.133
+ ARIMA(0,0,1)(2,0,2)[12] with zero mean     : Inf
+ ARIMA(0,0,1)(2,0,2)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)            with zero mean     : 1664.467
+ ARIMA(0,0,2)            with non-zero mean : Inf
+ ARIMA(0,0,2)(0,0,1)[12] with zero mean     : 1661.604
+ ARIMA(0,0,2)(0,0,1)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)(0,0,2)[12] with zero mean     : 1653.536
+ ARIMA(0,0,2)(0,0,2)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)(1,0,0)[12] with zero mean     : Inf
+ ARIMA(0,0,2)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,2)(1,0,1)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)(1,0,2)[12] with zero mean     : Inf
+ ARIMA(0,0,2)(1,0,2)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(0,0,2)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,2)(2,0,1)[12] with non-zero mean : Inf
+ ARIMA(0,0,3)            with zero mean     : 1660.71
+ ARIMA(0,0,3)            with non-zero mean : 1661.507
+ ARIMA(0,0,3)(0,0,1)[12] with zero mean     : 1655.469
+ ARIMA(0,0,3)(0,0,1)[12] with non-zero mean : 1656.325
+ ARIMA(0,0,3)(0,0,2)[12] with zero mean     : 1649.336
+ ARIMA(0,0,3)(0,0,2)[12] with non-zero mean : 1650.415
+ ARIMA(0,0,3)(1,0,0)[12] with zero mean     : Inf
+ ARIMA(0,0,3)(1,0,0)[12] with non-zero mean : 1648.478
+ ARIMA(0,0,3)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,3)(1,0,1)[12] with non-zero mean : 1650.007
+ ARIMA(0,0,3)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(0,0,3)(2,0,0)[12] with non-zero mean : 1649.956
+ ARIMA(0,0,4)            with zero mean     : Inf
+ ARIMA(0,0,4)            with non-zero mean : Inf
+ ARIMA(0,0,4)(0,0,1)[12] with zero mean     : 1638.858
+ ARIMA(0,0,4)(0,0,1)[12] with non-zero mean : 1639.829
+ ARIMA(0,0,4)(1,0,0)[12] with zero mean     : 1634.663
+ ARIMA(0,0,4)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(0,0,5)            with zero mean     : 1640.823
+ ARIMA(0,0,5)            with non-zero mean : 1641.544
+ ARIMA(1,0,0)            with zero mean     : 1704.666
+ ARIMA(1,0,0)            with non-zero mean : 1706.777
+ ARIMA(1,0,0)(0,0,1)[12] with zero mean     : 1704.138
+ ARIMA(1,0,0)(0,0,1)[12] with non-zero mean : 1706.302
+ ARIMA(1,0,0)(0,0,2)[12] with zero mean     : 1692.739
+ ARIMA(1,0,0)(0,0,2)[12] with non-zero mean : 1694.945
+ ARIMA(1,0,0)(1,0,0)[12] with zero mean     : 1700.165
+ ARIMA(1,0,0)(1,0,0)[12] with non-zero mean : 1702.335
+ ARIMA(1,0,0)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,0)(1,0,1)[12] with non-zero mean : Inf
+ ARIMA(1,0,0)(1,0,2)[12] with zero mean     : 1693.353
+ ARIMA(1,0,0)(1,0,2)[12] with non-zero mean : 1695.617
+ ARIMA(1,0,0)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(1,0,0)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(1,0,0)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,0)(2,0,1)[12] with non-zero mean : Inf
+ ARIMA(1,0,0)(2,0,2)[12] with zero mean     : Inf
+ ARIMA(1,0,0)(2,0,2)[12] with non-zero mean : Inf
+ ARIMA(1,0,1)            with zero mean     : 1666.747
+ ARIMA(1,0,1)            with non-zero mean : Inf
+ ARIMA(1,0,1)(0,0,1)[12] with zero mean     : 1665.056
+ ARIMA(1,0,1)(0,0,1)[12] with non-zero mean : Inf
+ ARIMA(1,0,1)(0,0,2)[12] with zero mean     : 1657.459
+ ARIMA(1,0,1)(0,0,2)[12] with non-zero mean : Inf
+ ARIMA(1,0,1)(1,0,0)[12] with zero mean     : Inf
+ ARIMA(1,0,1)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(1,0,1)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,1)(1,0,1)[12] with non-zero mean : Inf
+ ARIMA(1,0,1)(1,0,2)[12] with zero mean     : Inf
+ ARIMA(1,0,1)(1,0,2)[12] with non-zero mean : Inf
+ ARIMA(1,0,1)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(1,0,1)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(1,0,1)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,1)(2,0,1)[12] with non-zero mean : Inf
+ ARIMA(1,0,2)            with zero mean     : 1665.745
+ ARIMA(1,0,2)            with non-zero mean : Inf
+ ARIMA(1,0,2)(0,0,1)[12] with zero mean     : 1662.602
+ ARIMA(1,0,2)(0,0,1)[12] with non-zero mean : Inf
+ ARIMA(1,0,2)(0,0,2)[12] with zero mean     : 1654.893
+ ARIMA(1,0,2)(0,0,2)[12] with non-zero mean : Inf
+ ARIMA(1,0,2)(1,0,0)[12] with zero mean     : Inf
+ ARIMA(1,0,2)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(1,0,2)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,2)(1,0,1)[12] with non-zero mean : Inf
+ ARIMA(1,0,2)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(1,0,2)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(1,0,3)            with zero mean     : Inf
+ ARIMA(1,0,3)            with non-zero mean : Inf
+ ARIMA(1,0,3)(0,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,3)(0,0,1)[12] with non-zero mean : 1653.258
+ ARIMA(1,0,3)(1,0,0)[12] with zero mean     : Inf
+ ARIMA(1,0,3)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(1,0,4)            with zero mean     : 1640.911
+ ARIMA(1,0,4)            with non-zero mean : 1641.634
+ ARIMA(2,0,0)            with zero mean     : 1683.748
+ ARIMA(2,0,0)            with non-zero mean : 1685.857
+ ARIMA(2,0,0)(0,0,1)[12] with zero mean     : 1676.185
+ ARIMA(2,0,0)(0,0,1)[12] with non-zero mean : 1678.354
+ ARIMA(2,0,0)(0,0,2)[12] with zero mean     : 1666.585
+ ARIMA(2,0,0)(0,0,2)[12] with non-zero mean : 1668.783
+ ARIMA(2,0,0)(1,0,0)[12] with zero mean     : Inf
+ ARIMA(2,0,0)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(2,0,0)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(2,0,0)(1,0,1)[12] with non-zero mean : Inf
+ ARIMA(2,0,0)(1,0,2)[12] with zero mean     : Inf
+ ARIMA(2,0,0)(1,0,2)[12] with non-zero mean : 1666.914
+ ARIMA(2,0,0)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(2,0,0)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(2,0,0)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(2,0,0)(2,0,1)[12] with non-zero mean : Inf
+ ARIMA(2,0,1)            with zero mean     : 1654.537
+ ARIMA(2,0,1)            with non-zero mean : 1655.27
+ ARIMA(2,0,1)(0,0,1)[12] with zero mean     : 1647.028
+ ARIMA(2,0,1)(0,0,1)[12] with non-zero mean : 1647.914
+ ARIMA(2,0,1)(0,0,2)[12] with zero mean     : 1641.49
+ ARIMA(2,0,1)(0,0,2)[12] with non-zero mean : 1642.6
+ ARIMA(2,0,1)(1,0,0)[12] with zero mean     : Inf
+ ARIMA(2,0,1)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(2,0,1)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(2,0,1)(1,0,1)[12] with non-zero mean : 1641.46
+ ARIMA(2,0,1)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(2,0,1)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(2,0,2)            with zero mean     : 1655.604
+ ARIMA(2,0,2)            with non-zero mean : 1656.426
+ ARIMA(2,0,2)(0,0,1)[12] with zero mean     : 1648.818
+ ARIMA(2,0,2)(0,0,1)[12] with non-zero mean : 1649.778
+ ARIMA(2,0,2)(1,0,0)[12] with zero mean     : Inf
+ ARIMA(2,0,2)(1,0,0)[12] with non-zero mean : 1641.723
+ ARIMA(2,0,3)            with zero mean     : 1648.8
+ ARIMA(2,0,3)            with non-zero mean : Inf
+ ARIMA(3,0,0)            with zero mean     : 1658.024
+ ARIMA(3,0,0)            with non-zero mean : 1660.025
+ ARIMA(3,0,0)(0,0,1)[12] with zero mean     : 1654.916
+ ARIMA(3,0,0)(0,0,1)[12] with non-zero mean : 1657.008
+ ARIMA(3,0,0)(0,0,2)[12] with zero mean     : 1649.233
+ ARIMA(3,0,0)(0,0,2)[12] with non-zero mean : 1651.366
+ ARIMA(3,0,0)(1,0,0)[12] with zero mean     : Inf
+ ARIMA(3,0,0)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(3,0,0)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(3,0,0)(1,0,1)[12] with non-zero mean : Inf
+ ARIMA(3,0,0)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(3,0,0)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(3,0,1)            with zero mean     : 1654.562
+ ARIMA(3,0,1)            with non-zero mean : 1655.442
+ ARIMA(3,0,1)(0,0,1)[12] with zero mean     : 1648.554
+ ARIMA(3,0,1)(0,0,1)[12] with non-zero mean : 1649.529
+ ARIMA(3,0,1)(1,0,0)[12] with zero mean     : Inf
+ ARIMA(3,0,1)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(3,0,2) with zero mean     : Inf
+ ARIMA(3,0,2) with non-zero mean : Inf
+ ARIMA(4,0,0)            with zero mean     : 1660.234
+ ARIMA(4,0,0)            with non-zero mean : 1662.28
+ ARIMA(4,0,0)(0,0,1)[12] with zero mean     : 1657.135
+ ARIMA(4,0,0)(0,0,1)[12] with non-zero mean : 1659.27
+ ARIMA(4,0,0)(1,0,0)[12] with zero mean     : Inf
+ ARIMA(4,0,0)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(4,0,1)            with zero mean     : 1653.824
+ ARIMA(4,0,1)            with non-zero mean : 1654.722
+ ARIMA(5,0,0)            with zero mean     : 1646.488
+ ARIMA(5,0,0)            with non-zero mean : 1647.842
 
- ARIMA(0,2,0)                               : 1708.419
- ARIMA(0,2,0)(0,0,1)[12]                    : 1706.704
- ARIMA(0,2,0)(0,0,2)[12]                    : 1695.107
- ARIMA(0,2,0)(1,0,0)[12]                    : 1701.617
- ARIMA(0,2,0)(1,0,1)[12]                    : Inf
- ARIMA(0,2,0)(1,0,2)[12]                    : 1695.263
- ARIMA(0,2,0)(2,0,0)[12]                    : Inf
- ARIMA(0,2,0)(2,0,1)[12]                    : Inf
- ARIMA(0,2,0)(2,0,2)[12]                    : Inf
- ARIMA(0,2,1)                               : 1666.059
- ARIMA(0,2,1)(0,0,1)[12]                    : 1664.503
- ARIMA(0,2,1)(0,0,2)[12]                    : 1657.492
- ARIMA(0,2,1)(1,0,0)[12]                    : 1659.983
- ARIMA(0,2,1)(1,0,1)[12]                    : Inf
- ARIMA(0,2,1)(1,0,2)[12]                    : Inf
- ARIMA(0,2,1)(2,0,0)[12]                    : Inf
- ARIMA(0,2,1)(2,0,1)[12]                    : Inf
- ARIMA(0,2,1)(2,0,2)[12]                    : Inf
- ARIMA(0,2,2)                               : 1664.466
- ARIMA(0,2,2)(0,0,1)[12]                    : 1661.604
- ARIMA(0,2,2)(0,0,2)[12]                    : 1653.536
- ARIMA(0,2,2)(1,0,0)[12]                    : Inf
- ARIMA(0,2,2)(1,0,1)[12]                    : Inf
- ARIMA(0,2,2)(1,0,2)[12]                    : Inf
- ARIMA(0,2,2)(2,0,0)[12]                    : Inf
- ARIMA(0,2,2)(2,0,1)[12]                    : Inf
- ARIMA(0,2,3)                               : 1660.71
- ARIMA(0,2,3)(0,0,1)[12]                    : 1655.469
- ARIMA(0,2,3)(0,0,2)[12]                    : 1649.336
- ARIMA(0,2,3)(1,0,0)[12]                    : Inf
- ARIMA(0,2,3)(1,0,1)[12]                    : Inf
- ARIMA(0,2,3)(2,0,0)[12]                    : Inf
- ARIMA(0,2,4)                               : Inf
- ARIMA(0,2,4)(0,0,1)[12]                    : 1638.858
- ARIMA(0,2,4)(1,0,0)[12]                    : 1634.663
- ARIMA(0,2,5)                               : 1640.823
- ARIMA(1,2,0)                               : 1704.666
- ARIMA(1,2,0)(0,0,1)[12]                    : 1704.138
- ARIMA(1,2,0)(0,0,2)[12]                    : 1692.739
- ARIMA(1,2,0)(1,0,0)[12]                    : 1700.165
- ARIMA(1,2,0)(1,0,1)[12]                    : Inf
- ARIMA(1,2,0)(1,0,2)[12]                    : 1693.353
- ARIMA(1,2,0)(2,0,0)[12]                    : Inf
- ARIMA(1,2,0)(2,0,1)[12]                    : Inf
- ARIMA(1,2,0)(2,0,2)[12]                    : Inf
- ARIMA(1,2,1)                               : 1666.747
- ARIMA(1,2,1)(0,0,1)[12]                    : 1665.056
- ARIMA(1,2,1)(0,0,2)[12]                    : 1657.459
- ARIMA(1,2,1)(1,0,0)[12]                    : Inf
- ARIMA(1,2,1)(1,0,1)[12]                    : Inf
- ARIMA(1,2,1)(1,0,2)[12]                    : Inf
- ARIMA(1,2,1)(2,0,0)[12]                    : Inf
- ARIMA(1,2,1)(2,0,1)[12]                    : Inf
- ARIMA(1,2,2)                               : 1665.745
- ARIMA(1,2,2)(0,0,1)[12]                    : 1662.602
- ARIMA(1,2,2)(0,0,2)[12]                    : 1654.893
- ARIMA(1,2,2)(1,0,0)[12]                    : Inf
- ARIMA(1,2,2)(1,0,1)[12]                    : Inf
- ARIMA(1,2,2)(2,0,0)[12]                    : Inf
- ARIMA(1,2,3)                               : Inf
- ARIMA(1,2,3)(0,0,1)[12]                    : Inf
- ARIMA(1,2,3)(1,0,0)[12]                    : Inf
- ARIMA(1,2,4)                               : 1640.911
- ARIMA(2,2,0)                               : 1683.748
- ARIMA(2,2,0)(0,0,1)[12]                    : 1676.185
- ARIMA(2,2,0)(0,0,2)[12]                    : 1666.585
- ARIMA(2,2,0)(1,0,0)[12]                    : Inf
- ARIMA(2,2,0)(1,0,1)[12]                    : Inf
- ARIMA(2,2,0)(1,0,2)[12]                    : Inf
- ARIMA(2,2,0)(2,0,0)[12]                    : Inf
- ARIMA(2,2,0)(2,0,1)[12]                    : Inf
- ARIMA(2,2,1)                               : 1654.537
- ARIMA(2,2,1)(0,0,1)[12]                    : 1647.028
- ARIMA(2,2,1)(0,0,2)[12]                    : 1641.49
- ARIMA(2,2,1)(1,0,0)[12]                    : Inf
- ARIMA(2,2,1)(1,0,1)[12]                    : Inf
- ARIMA(2,2,1)(2,0,0)[12]                    : Inf
- ARIMA(2,2,2)                               : 1655.604
- ARIMA(2,2,2)(0,0,1)[12]                    : 1648.818
- ARIMA(2,2,2)(1,0,0)[12]                    : Inf
- ARIMA(2,2,3)                               : 1648.8
- ARIMA(3,2,0)                               : 1658.024
- ARIMA(3,2,0)(0,0,1)[12]                    : 1654.916
- ARIMA(3,2,0)(0,0,2)[12]                    : 1649.233
- ARIMA(3,2,0)(1,0,0)[12]                    : Inf
- ARIMA(3,2,0)(1,0,1)[12]                    : Inf
- ARIMA(3,2,0)(2,0,0)[12]                    : Inf
- ARIMA(3,2,1)                               : 1654.562
- ARIMA(3,2,1)(0,0,1)[12]                    : 1648.554
- ARIMA(3,2,1)(1,0,0)[12]                    : Inf
- ARIMA(3,2,2)                    : Inf
- ARIMA(4,2,0)                               : 1660.234
- ARIMA(4,2,0)(0,0,1)[12]                    : 1657.135
- ARIMA(4,2,0)(1,0,0)[12]                    : Inf
- ARIMA(4,2,1)                               : 1653.824
- ARIMA(5,2,0)                               : 1646.488
 
 
+ Best model: ARIMA(0,0,4)(1,0,0)[12] with zero mean     
 
- Best model: ARIMA(0,2,4)(1,0,0)[12]                    
 
-
-Selected order: 0,2,4,1,0,0,12 
-Series: train_ts 
-ARIMA(0,2,4)(1,0,0)[12] 
+Selected order: 0,0,4,1,0,0,12 
+Series: train_diff 
+ARIMA(0,0,4)(1,0,0)[12] with zero mean 
 
 Coefficients:
           ma1      ma2      ma3     ma4    sar1
@@ -128,272 +216,245 @@ sigma^2 = 1772159:  log likelihood = -810.85
 AIC=1633.7   AICc=1634.66   BIC=1648.96
 
 Training set error measures:
-                   ME     RMSE      MAE       MPE     MAPE      MASE       ACF1
-Training set 150.4115 1281.772 621.9995 0.6244995 36.27429 0.2958598 -0.1150847
+                   ME     RMSE      MAE      MPE     MAPE      MASE       ACF1
+Training set 153.6144 1295.336 635.2292 66.81967 240.5079 0.6602795 -0.1153497
 
-3. Residual Diagnostics (Ljung-Box test):
+2. Residual Diagnostics (Ljung-Box test):
 
 	Ljung-Box test
 
-data:  Residuals from ARIMA(0,2,4)(1,0,0)[12]
-Q* = 14.092, df = 14, p-value = 0.4429
+data:  Residuals from ARIMA(0,0,4)(1,0,0)[12] with zero mean
+Q* = 13.84, df = 14, p-value = 0.4617
 
 Model df: 5.   Total lags used: 19
 
 
 	Ljung-Box test
 
-data:  Residuals from ARIMA(0,2,4)(1,0,0)[12]
-Q* = 14.092, df = 14, p-value = 0.4429
-
-
-	Ljung-Box test
-
-data:  Residuals from ARIMA(0,2,4)(1,0,0)[12]
-Q* = 14.092, df = 14, p-value = 0.4429
+data:  Residuals from ARIMA(0,0,4)(1,0,0)[12] with zero mean
+Q* = 13.84, df = 14, p-value = 0.4617
 
 Model df: 5.   Total lags used: 19
 
 Saved: sarima_02_residuals_2wheelers.png 
 
-4. Forecasting and Evaluation on Test Set
+3. Forecasting and Evaluation on Test Set
 
 --- Full Accuracy Matrix ---
-      RMSE      MAE    MASE Theils_U        ME
-1 29056.76 21525.76 10.2389   0.5495 -14267.84
+      RMSE      MAE    MASE Theils_U       ME
+1 38031.72 33876.11 16.1135   0.7192 33876.11
 Saved: sarima_03_testforecast_2wheelers.png 
 
-5. Future Forecast (next 12 months beyond dataset):
-         Point Forecast    Lo 80     Hi 80    Lo 95     Hi 95
-Feb 2024       79900.48 70994.73  88806.22 66280.31  93520.64
-Mar 2024       89278.26 79694.06  98862.46 74620.49 103936.03
-Apr 2024       81999.57 70962.80  93036.34 65120.29  98878.85
-May 2024       98460.21 86590.05 110330.37 80306.37 116614.05
-Jun 2024       74950.03 62259.84  87640.22 55542.06  94358.00
-Jul 2024       79103.81 65603.47  92604.14 58456.83  99750.79
-Aug 2024       83228.23 68924.98  97531.49 61353.29 105103.17
-Sep 2024       84497.69 69396.65  99598.72 61402.65 107592.73
-Oct 2024       89681.11 73785.78 105576.44 65371.30 113990.92
-Nov 2024       97205.49 80518.01 113892.97 71684.19 122726.79
-Dec 2024       91535.62 74057.04 109014.21 64804.44 118266.81
-Jan 2025       94669.53 76399.99 112939.07 66728.68 122610.38
+4. Future Forecast (next 12 months beyond dataset):
 Saved: sarima_04_futureforecast_2wheelers.png 
 
 ======================================================
-ANALYZING CATEGORY: 3-Wheelers
+ANALYZING CATEGORY (SARIMA): 3-Wheelers
 ======================================================
 
-1. Stationarity Tests on Raw Training Data:
-   ADF p-value : 0.2317 ->  Non-stationary 
-   KPSS p-value: 0.01 ->  Non-stationary 
-   Suggested non-seasonal differencing (d): 1 
-   Suggested seasonal differencing (D)    : 0 
-Saved: sarima_00_acfpacf_raw_3wheelers.png 
-Saved: sarima_01_acfpacf_3wheelers.png 
+1. Fitting SARIMA Model...
 
-2. Fitting SARIMA Model...
-
- ARIMA(0,1,0)                               : 1721.885
- ARIMA(0,1,0)            with drift         : 1722.511
- ARIMA(0,1,0)(0,0,1)[12]                    : 1711.107
- ARIMA(0,1,0)(0,0,1)[12] with drift         : 1711.965
- ARIMA(0,1,0)(0,0,2)[12]                    : 1711.02
- ARIMA(0,1,0)(0,0,2)[12] with drift         : 1712.11
- ARIMA(0,1,0)(1,0,0)[12]                    : 1707.692
- ARIMA(0,1,0)(1,0,0)[12] with drift         : 1708.911
- ARIMA(0,1,0)(1,0,1)[12]                    : Inf
- ARIMA(0,1,0)(1,0,1)[12] with drift         : 1710.716
- ARIMA(0,1,0)(1,0,2)[12]                    : Inf
- ARIMA(0,1,0)(1,0,2)[12] with drift         : 1712.942
- ARIMA(0,1,0)(2,0,0)[12]                    : 1709.309
- ARIMA(0,1,0)(2,0,0)[12] with drift         : 1710.723
- ARIMA(0,1,0)(2,0,1)[12]                    : Inf
- ARIMA(0,1,0)(2,0,1)[12] with drift         : 1712.944
- ARIMA(0,1,0)(2,0,2)[12]                    : Inf
- ARIMA(0,1,0)(2,0,2)[12] with drift         : 1715.213
- ARIMA(0,1,1)                               : 1717.976
- ARIMA(0,1,1)            with drift         : 1719.109
- ARIMA(0,1,1)(0,0,1)[12]                    : 1711.485
- ARIMA(0,1,1)(0,0,1)[12] with drift         : 1712.66
- ARIMA(0,1,1)(0,0,2)[12]                    : 1711.745
- ARIMA(0,1,1)(0,0,2)[12] with drift         : 1713.099
- ARIMA(0,1,1)(1,0,0)[12]                    : 1708.766
- ARIMA(0,1,1)(1,0,0)[12] with drift         : 1710.146
- ARIMA(0,1,1)(1,0,1)[12]                    : Inf
- ARIMA(0,1,1)(1,0,1)[12] with drift         : 1711.666
- ARIMA(0,1,1)(1,0,2)[12]                    : Inf
- ARIMA(0,1,1)(1,0,2)[12] with drift         : 1713.943
- ARIMA(0,1,1)(2,0,0)[12]                    : 1710.125
- ARIMA(0,1,1)(2,0,0)[12] with drift         : 1711.723
- ARIMA(0,1,1)(2,0,1)[12]                    : Inf
- ARIMA(0,1,1)(2,0,1)[12] with drift         : 1713.944
- ARIMA(0,1,1)(2,0,2)[12]                    : Inf
- ARIMA(0,1,1)(2,0,2)[12] with drift         : Inf
- ARIMA(0,1,2)                               : 1717.072
- ARIMA(0,1,2)            with drift         : 1717.797
- ARIMA(0,1,2)(0,0,1)[12]                    : 1710.187
- ARIMA(0,1,2)(0,0,1)[12] with drift         : 1710.962
- ARIMA(0,1,2)(0,0,2)[12]                    : 1709.471
- ARIMA(0,1,2)(0,0,2)[12] with drift         : 1710.459
- ARIMA(0,1,2)(1,0,0)[12]                    : 1706.794
- ARIMA(0,1,2)(1,0,0)[12] with drift         : 1707.84
- ARIMA(0,1,2)(1,0,1)[12]                    : Inf
- ARIMA(0,1,2)(1,0,1)[12] with drift         : 1709.046
- ARIMA(0,1,2)(1,0,2)[12]                    : Inf
- ARIMA(0,1,2)(1,0,2)[12] with drift         : 1711.153
- ARIMA(0,1,2)(2,0,0)[12]                    : 1707.534
- ARIMA(0,1,2)(2,0,0)[12] with drift         : 1708.91
- ARIMA(0,1,2)(2,0,1)[12]                    : Inf
- ARIMA(0,1,2)(2,0,1)[12] with drift         : 1711.239
- ARIMA(0,1,3)                               : 1718.899
- ARIMA(0,1,3)            with drift         : 1719.375
- ARIMA(0,1,3)(0,0,1)[12]                    : 1712.413
- ARIMA(0,1,3)(0,0,1)[12] with drift         : 1713.204
- ARIMA(0,1,3)(0,0,2)[12]                    : 1711.751
- ARIMA(0,1,3)(0,0,2)[12] with drift         : 1712.774
- ARIMA(0,1,3)(1,0,0)[12]                    : 1709.015
- ARIMA(0,1,3)(1,0,0)[12] with drift         : 1710.12
- ARIMA(0,1,3)(1,0,1)[12]                    : Inf
- ARIMA(0,1,3)(1,0,1)[12] with drift         : 1711.359
- ARIMA(0,1,3)(2,0,0)[12]                    : 1709.811
- ARIMA(0,1,3)(2,0,0)[12] with drift         : 1711.225
- ARIMA(0,1,4)                               : 1720.258
- ARIMA(0,1,4)            with drift         : 1721.219
- ARIMA(0,1,4)(0,0,1)[12]                    : 1713.901
- ARIMA(0,1,4)(0,0,1)[12] with drift         : 1715.025
- ARIMA(0,1,4)(1,0,0)[12]                    : 1710.464
- ARIMA(0,1,4)(1,0,0)[12] with drift         : 1711.82
- ARIMA(0,1,5)                               : 1719.745
- ARIMA(0,1,5)            with drift         : Inf
- ARIMA(1,1,0)                               : 1720.674
- ARIMA(1,1,0)            with drift         : 1721.706
- ARIMA(1,1,0)(0,0,1)[12]                    : 1712.27
- ARIMA(1,1,0)(0,0,1)[12] with drift         : 1713.354
- ARIMA(1,1,0)(0,0,2)[12]                    : 1712.465
- ARIMA(1,1,0)(0,0,2)[12] with drift         : 1713.732
- ARIMA(1,1,0)(1,0,0)[12]                    : 1709.276
- ARIMA(1,1,0)(1,0,0)[12] with drift         : 1710.614
- ARIMA(1,1,0)(1,0,1)[12]                    : Inf
- ARIMA(1,1,0)(1,0,1)[12] with drift         : 1712.338
- ARIMA(1,1,0)(1,0,2)[12]                    : Inf
- ARIMA(1,1,0)(1,0,2)[12] with drift         : 1714.617
- ARIMA(1,1,0)(2,0,0)[12]                    : Inf
- ARIMA(1,1,0)(2,0,0)[12] with drift         : Inf
- ARIMA(1,1,0)(2,0,1)[12]                    : Inf
- ARIMA(1,1,0)(2,0,1)[12] with drift         : 1714.617
- ARIMA(1,1,0)(2,0,2)[12]                    : Inf
- ARIMA(1,1,0)(2,0,2)[12] with drift         : Inf
- ARIMA(1,1,1)                               : 1718.118
- ARIMA(1,1,1)            with drift         : 1719.136
- ARIMA(1,1,1)(0,0,1)[12]                    : 1711.488
- ARIMA(1,1,1)(0,0,1)[12] with drift         : 1712.614
- ARIMA(1,1,1)(0,0,2)[12]                    : 1711.302
- ARIMA(1,1,1)(0,0,2)[12] with drift         : 1712.64
- ARIMA(1,1,1)(1,0,0)[12]                    : 1708.731
- ARIMA(1,1,1)(1,0,0)[12] with drift         : 1709.874
- ARIMA(1,1,1)(1,0,1)[12]                    : Inf
- ARIMA(1,1,1)(1,0,1)[12] with drift         : 1711.189
- ARIMA(1,1,1)(1,0,2)[12]                    : Inf
- ARIMA(1,1,1)(1,0,2)[12] with drift         : 1713.45
- ARIMA(1,1,1)(2,0,0)[12]                    : 1709.555
- ARIMA(1,1,1)(2,0,0)[12] with drift         : 1711.166
- ARIMA(1,1,1)(2,0,1)[12]                    : Inf
- ARIMA(1,1,1)(2,0,1)[12] with drift         : 1713.472
- ARIMA(1,1,2)                               : 1718.472
- ARIMA(1,1,2)            with drift         : Inf
- ARIMA(1,1,2)(0,0,1)[12]                    : 1712.415
- ARIMA(1,1,2)(0,0,1)[12] with drift         : 1713.215
- ARIMA(1,1,2)(0,0,2)[12]                    : 1711.751
- ARIMA(1,1,2)(0,0,2)[12] with drift         : 1712.779
- ARIMA(1,1,2)(1,0,0)[12]                    : 1709.018
- ARIMA(1,1,2)(1,0,0)[12] with drift         : Inf
- ARIMA(1,1,2)(1,0,1)[12]                    : Inf
- ARIMA(1,1,2)(1,0,1)[12] with drift         : 1711.365
- ARIMA(1,1,2)(2,0,0)[12]                    : Inf
- ARIMA(1,1,2)(2,0,0)[12] with drift         : Inf
- ARIMA(1,1,3)                               : 1719.616
- ARIMA(1,1,3)            with drift         : Inf
- ARIMA(1,1,3)(0,0,1)[12]                    : Inf
- ARIMA(1,1,3)(0,0,1)[12] with drift         : Inf
- ARIMA(1,1,3)(1,0,0)[12]                    : 1711.263
- ARIMA(1,1,3)(1,0,0)[12] with drift         : Inf
- ARIMA(1,1,4)                               : 1721.494
- ARIMA(1,1,4)            with drift         : 1722.371
- ARIMA(2,1,0)                               : 1718.115
- ARIMA(2,1,0)            with drift         : 1718.695
- ARIMA(2,1,0)(0,0,1)[12]                    : 1710.846
- ARIMA(2,1,0)(0,0,1)[12] with drift         : 1711.554
- ARIMA(2,1,0)(0,0,2)[12]                    : 1710.269
- ARIMA(2,1,0)(0,0,2)[12] with drift         : 1711.198
- ARIMA(2,1,0)(1,0,0)[12]                    : 1707.331
- ARIMA(2,1,0)(1,0,0)[12] with drift         : 1708.349
- ARIMA(2,1,0)(1,0,1)[12]                    : Inf
- ARIMA(2,1,0)(1,0,1)[12] with drift         : 1709.676
- ARIMA(2,1,0)(1,0,2)[12]                    : Inf
- ARIMA(2,1,0)(1,0,2)[12] with drift         : 1711.818
- ARIMA(2,1,0)(2,0,0)[12]                    : 1708.232
- ARIMA(2,1,0)(2,0,0)[12] with drift         : 1709.573
- ARIMA(2,1,0)(2,0,1)[12]                    : Inf
- ARIMA(2,1,0)(2,0,1)[12] with drift         : 1711.901
- ARIMA(2,1,1)                               : 1718.805
- ARIMA(2,1,1)            with drift         : 1719.573
- ARIMA(2,1,1)(0,0,1)[12]                    : 1712.062
- ARIMA(2,1,1)(0,0,1)[12] with drift         : 1712.93
- ARIMA(2,1,1)(0,0,2)[12]                    : 1711.342
- ARIMA(2,1,1)(0,0,2)[12] with drift         : 1712.442
- ARIMA(2,1,1)(1,0,0)[12]                    : 1708.589
- ARIMA(2,1,1)(1,0,0)[12] with drift         : 1709.738
- ARIMA(2,1,1)(1,0,1)[12]                    : Inf
- ARIMA(2,1,1)(1,0,1)[12] with drift         : 1711.028
- ARIMA(2,1,1)(2,0,0)[12]                    : 1709.417
- ARIMA(2,1,1)(2,0,0)[12] with drift         : 1710.887
- ARIMA(2,1,2)                               : 1715.866
- ARIMA(2,1,2)            with drift         : Inf
- ARIMA(2,1,2)(0,0,1)[12]                    : 1708.17
- ARIMA(2,1,2)(0,0,1)[12] with drift         : 1709.322
- ARIMA(2,1,2)(1,0,0)[12]                    : Inf
- ARIMA(2,1,2)(1,0,0)[12] with drift         : Inf
- ARIMA(2,1,3)                               : 1718.077
- ARIMA(2,1,3)            with drift         : Inf
- ARIMA(3,1,0)                               : 1719.127
- ARIMA(3,1,0)            with drift         : 1719.992
- ARIMA(3,1,0)(0,0,1)[12]                    : 1712.068
- ARIMA(3,1,0)(0,0,1)[12] with drift         : 1713.038
- ARIMA(3,1,0)(0,0,2)[12]                    : 1711.543
- ARIMA(3,1,0)(0,0,2)[12] with drift         : 1712.708
- ARIMA(3,1,0)(1,0,0)[12]                    : 1708.616
- ARIMA(3,1,0)(1,0,0)[12] with drift         : 1709.843
- ARIMA(3,1,0)(1,0,1)[12]                    : Inf
- ARIMA(3,1,0)(1,0,1)[12] with drift         : 1711.232
- ARIMA(3,1,0)(2,0,0)[12]                    : 1709.62
- ARIMA(3,1,0)(2,0,0)[12] with drift         : 1711.125
- ARIMA(3,1,1)                               : 1720.863
- ARIMA(3,1,1)            with drift         : 1721.76
- ARIMA(3,1,1)(0,0,1)[12]                    : 1714.164
- ARIMA(3,1,1)(0,0,1)[12] with drift         : 1715.164
- ARIMA(3,1,1)(1,0,0)[12]                    : 1710.743
- ARIMA(3,1,1)(1,0,0)[12] with drift         : 1711.997
- ARIMA(3,1,2)                               : 1718.083
- ARIMA(3,1,2)            with drift         : Inf
- ARIMA(4,1,0)                               : 1719.97
- ARIMA(4,1,0)            with drift         : 1720.62
- ARIMA(4,1,0)(0,0,1)[12]                    : 1713.867
- ARIMA(4,1,0)(0,0,1)[12] with drift         : 1714.737
- ARIMA(4,1,0)(1,0,0)[12]                    : 1710.577
- ARIMA(4,1,0)(1,0,0)[12] with drift         : 1711.741
- ARIMA(4,1,1)                               : 1720.814
- ARIMA(4,1,1)            with drift         : Inf
- ARIMA(5,1,0)                               : 1722.041
- ARIMA(5,1,0)            with drift         : 1722.613
+ ARIMA(0,0,0)            with zero mean     : 1721.885
+ ARIMA(0,0,0)            with non-zero mean : 1722.511
+ ARIMA(0,0,0)(0,0,1)[12] with zero mean     : 1711.107
+ ARIMA(0,0,0)(0,0,1)[12] with non-zero mean : 1711.965
+ ARIMA(0,0,0)(0,0,2)[12] with zero mean     : 1711.02
+ ARIMA(0,0,0)(0,0,2)[12] with non-zero mean : 1712.11
+ ARIMA(0,0,0)(1,0,0)[12] with zero mean     : 1707.692
+ ARIMA(0,0,0)(1,0,0)[12] with non-zero mean : 1708.911
+ ARIMA(0,0,0)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,0)(1,0,1)[12] with non-zero mean : 1710.716
+ ARIMA(0,0,0)(1,0,2)[12] with zero mean     : Inf
+ ARIMA(0,0,0)(1,0,2)[12] with non-zero mean : 1712.942
+ ARIMA(0,0,0)(2,0,0)[12] with zero mean     : 1709.309
+ ARIMA(0,0,0)(2,0,0)[12] with non-zero mean : 1710.723
+ ARIMA(0,0,0)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,0)(2,0,1)[12] with non-zero mean : 1712.944
+ ARIMA(0,0,0)(2,0,2)[12] with zero mean     : Inf
+ ARIMA(0,0,0)(2,0,2)[12] with non-zero mean : 1715.213
+ ARIMA(0,0,1)            with zero mean     : 1717.976
+ ARIMA(0,0,1)            with non-zero mean : 1719.109
+ ARIMA(0,0,1)(0,0,1)[12] with zero mean     : 1711.485
+ ARIMA(0,0,1)(0,0,1)[12] with non-zero mean : 1712.66
+ ARIMA(0,0,1)(0,0,2)[12] with zero mean     : 1711.745
+ ARIMA(0,0,1)(0,0,2)[12] with non-zero mean : 1713.099
+ ARIMA(0,0,1)(1,0,0)[12] with zero mean     : 1708.766
+ ARIMA(0,0,1)(1,0,0)[12] with non-zero mean : 1710.146
+ ARIMA(0,0,1)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,1)(1,0,1)[12] with non-zero mean : 1711.666
+ ARIMA(0,0,1)(1,0,2)[12] with zero mean     : Inf
+ ARIMA(0,0,1)(1,0,2)[12] with non-zero mean : 1713.943
+ ARIMA(0,0,1)(2,0,0)[12] with zero mean     : 1710.125
+ ARIMA(0,0,1)(2,0,0)[12] with non-zero mean : 1711.723
+ ARIMA(0,0,1)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,1)(2,0,1)[12] with non-zero mean : 1713.944
+ ARIMA(0,0,1)(2,0,2)[12] with zero mean     : Inf
+ ARIMA(0,0,1)(2,0,2)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)            with zero mean     : 1717.072
+ ARIMA(0,0,2)            with non-zero mean : 1717.797
+ ARIMA(0,0,2)(0,0,1)[12] with zero mean     : 1710.187
+ ARIMA(0,0,2)(0,0,1)[12] with non-zero mean : 1710.962
+ ARIMA(0,0,2)(0,0,2)[12] with zero mean     : 1709.471
+ ARIMA(0,0,2)(0,0,2)[12] with non-zero mean : 1710.459
+ ARIMA(0,0,2)(1,0,0)[12] with zero mean     : 1706.794
+ ARIMA(0,0,2)(1,0,0)[12] with non-zero mean : 1707.84
+ ARIMA(0,0,2)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,2)(1,0,1)[12] with non-zero mean : 1709.046
+ ARIMA(0,0,2)(1,0,2)[12] with zero mean     : Inf
+ ARIMA(0,0,2)(1,0,2)[12] with non-zero mean : 1711.153
+ ARIMA(0,0,2)(2,0,0)[12] with zero mean     : 1707.534
+ ARIMA(0,0,2)(2,0,0)[12] with non-zero mean : 1708.91
+ ARIMA(0,0,2)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,2)(2,0,1)[12] with non-zero mean : 1711.239
+ ARIMA(0,0,3)            with zero mean     : 1718.899
+ ARIMA(0,0,3)            with non-zero mean : 1719.375
+ ARIMA(0,0,3)(0,0,1)[12] with zero mean     : 1712.413
+ ARIMA(0,0,3)(0,0,1)[12] with non-zero mean : 1713.204
+ ARIMA(0,0,3)(0,0,2)[12] with zero mean     : 1711.751
+ ARIMA(0,0,3)(0,0,2)[12] with non-zero mean : 1712.774
+ ARIMA(0,0,3)(1,0,0)[12] with zero mean     : 1709.015
+ ARIMA(0,0,3)(1,0,0)[12] with non-zero mean : 1710.12
+ ARIMA(0,0,3)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,3)(1,0,1)[12] with non-zero mean : 1711.359
+ ARIMA(0,0,3)(2,0,0)[12] with zero mean     : 1709.811
+ ARIMA(0,0,3)(2,0,0)[12] with non-zero mean : 1711.225
+ ARIMA(0,0,4)            with zero mean     : 1720.258
+ ARIMA(0,0,4)            with non-zero mean : 1721.219
+ ARIMA(0,0,4)(0,0,1)[12] with zero mean     : 1713.901
+ ARIMA(0,0,4)(0,0,1)[12] with non-zero mean : 1715.025
+ ARIMA(0,0,4)(1,0,0)[12] with zero mean     : 1710.464
+ ARIMA(0,0,4)(1,0,0)[12] with non-zero mean : 1711.82
+ ARIMA(0,0,5)            with zero mean     : 1719.745
+ ARIMA(0,0,5)            with non-zero mean : Inf
+ ARIMA(1,0,0)            with zero mean     : 1720.674
+ ARIMA(1,0,0)            with non-zero mean : 1721.706
+ ARIMA(1,0,0)(0,0,1)[12] with zero mean     : 1712.27
+ ARIMA(1,0,0)(0,0,1)[12] with non-zero mean : 1713.354
+ ARIMA(1,0,0)(0,0,2)[12] with zero mean     : 1712.465
+ ARIMA(1,0,0)(0,0,2)[12] with non-zero mean : 1713.732
+ ARIMA(1,0,0)(1,0,0)[12] with zero mean     : 1709.276
+ ARIMA(1,0,0)(1,0,0)[12] with non-zero mean : 1710.614
+ ARIMA(1,0,0)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,0)(1,0,1)[12] with non-zero mean : 1712.338
+ ARIMA(1,0,0)(1,0,2)[12] with zero mean     : Inf
+ ARIMA(1,0,0)(1,0,2)[12] with non-zero mean : 1714.617
+ ARIMA(1,0,0)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(1,0,0)(2,0,0)[12] with non-zero mean : 1712.366
+ ARIMA(1,0,0)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,0)(2,0,1)[12] with non-zero mean : 1714.618
+ ARIMA(1,0,0)(2,0,2)[12] with zero mean     : Inf
+ ARIMA(1,0,0)(2,0,2)[12] with non-zero mean : Inf
+ ARIMA(1,0,1)            with zero mean     : 1718.118
+ ARIMA(1,0,1)            with non-zero mean : 1719.136
+ ARIMA(1,0,1)(0,0,1)[12] with zero mean     : 1711.488
+ ARIMA(1,0,1)(0,0,1)[12] with non-zero mean : 1712.614
+ ARIMA(1,0,1)(0,0,2)[12] with zero mean     : 1711.302
+ ARIMA(1,0,1)(0,0,2)[12] with non-zero mean : 1712.64
+ ARIMA(1,0,1)(1,0,0)[12] with zero mean     : 1708.731
+ ARIMA(1,0,1)(1,0,0)[12] with non-zero mean : 1709.874
+ ARIMA(1,0,1)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,1)(1,0,1)[12] with non-zero mean : 1711.189
+ ARIMA(1,0,1)(1,0,2)[12] with zero mean     : Inf
+ ARIMA(1,0,1)(1,0,2)[12] with non-zero mean : 1713.45
+ ARIMA(1,0,1)(2,0,0)[12] with zero mean     : 1709.555
+ ARIMA(1,0,1)(2,0,0)[12] with non-zero mean : 1711.166
+ ARIMA(1,0,1)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,1)(2,0,1)[12] with non-zero mean : 1713.472
+ ARIMA(1,0,2)            with zero mean     : 1718.472
+ ARIMA(1,0,2)            with non-zero mean : Inf
+ ARIMA(1,0,2)(0,0,1)[12] with zero mean     : 1712.415
+ ARIMA(1,0,2)(0,0,1)[12] with non-zero mean : 1713.215
+ ARIMA(1,0,2)(0,0,2)[12] with zero mean     : 1711.751
+ ARIMA(1,0,2)(0,0,2)[12] with non-zero mean : 1712.779
+ ARIMA(1,0,2)(1,0,0)[12] with zero mean     : 1709.018
+ ARIMA(1,0,2)(1,0,0)[12] with non-zero mean : 1710.12
+ ARIMA(1,0,2)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,2)(1,0,1)[12] with non-zero mean : 1711.365
+ ARIMA(1,0,2)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(1,0,2)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(1,0,3)            with zero mean     : 1719.616
+ ARIMA(1,0,3)            with non-zero mean : Inf
+ ARIMA(1,0,3)(0,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,3)(0,0,1)[12] with non-zero mean : Inf
+ ARIMA(1,0,3)(1,0,0)[12] with zero mean     : 1711.263
+ ARIMA(1,0,3)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(1,0,4)            with zero mean     : 1721.494
+ ARIMA(1,0,4)            with non-zero mean : 1722.371
+ ARIMA(2,0,0)            with zero mean     : 1718.115
+ ARIMA(2,0,0)            with non-zero mean : 1718.695
+ ARIMA(2,0,0)(0,0,1)[12] with zero mean     : 1710.846
+ ARIMA(2,0,0)(0,0,1)[12] with non-zero mean : 1711.554
+ ARIMA(2,0,0)(0,0,2)[12] with zero mean     : 1710.269
+ ARIMA(2,0,0)(0,0,2)[12] with non-zero mean : 1711.198
+ ARIMA(2,0,0)(1,0,0)[12] with zero mean     : 1707.331
+ ARIMA(2,0,0)(1,0,0)[12] with non-zero mean : 1708.349
+ ARIMA(2,0,0)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(2,0,0)(1,0,1)[12] with non-zero mean : 1709.676
+ ARIMA(2,0,0)(1,0,2)[12] with zero mean     : Inf
+ ARIMA(2,0,0)(1,0,2)[12] with non-zero mean : 1711.818
+ ARIMA(2,0,0)(2,0,0)[12] with zero mean     : 1708.232
+ ARIMA(2,0,0)(2,0,0)[12] with non-zero mean : 1709.573
+ ARIMA(2,0,0)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(2,0,0)(2,0,1)[12] with non-zero mean : 1711.901
+ ARIMA(2,0,1)            with zero mean     : 1718.805
+ ARIMA(2,0,1)            with non-zero mean : 1719.573
+ ARIMA(2,0,1)(0,0,1)[12] with zero mean     : 1712.062
+ ARIMA(2,0,1)(0,0,1)[12] with non-zero mean : 1712.93
+ ARIMA(2,0,1)(0,0,2)[12] with zero mean     : 1711.342
+ ARIMA(2,0,1)(0,0,2)[12] with non-zero mean : 1712.442
+ ARIMA(2,0,1)(1,0,0)[12] with zero mean     : 1708.589
+ ARIMA(2,0,1)(1,0,0)[12] with non-zero mean : 1709.738
+ ARIMA(2,0,1)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(2,0,1)(1,0,1)[12] with non-zero mean : 1711.028
+ ARIMA(2,0,1)(2,0,0)[12] with zero mean     : 1709.417
+ ARIMA(2,0,1)(2,0,0)[12] with non-zero mean : 1710.887
+ ARIMA(2,0,2)            with zero mean     : 1715.866
+ ARIMA(2,0,2)            with non-zero mean : Inf
+ ARIMA(2,0,2)(0,0,1)[12] with zero mean     : 1708.17
+ ARIMA(2,0,2)(0,0,1)[12] with non-zero mean : 1709.322
+ ARIMA(2,0,2)(1,0,0)[12] with zero mean     : Inf
+ ARIMA(2,0,2)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(2,0,3)            with zero mean     : 1718.077
+ ARIMA(2,0,3)            with non-zero mean : Inf
+ ARIMA(3,0,0)            with zero mean     : 1719.127
+ ARIMA(3,0,0)            with non-zero mean : 1719.992
+ ARIMA(3,0,0)(0,0,1)[12] with zero mean     : 1712.068
+ ARIMA(3,0,0)(0,0,1)[12] with non-zero mean : 1713.038
+ ARIMA(3,0,0)(0,0,2)[12] with zero mean     : 1711.543
+ ARIMA(3,0,0)(0,0,2)[12] with non-zero mean : 1712.708
+ ARIMA(3,0,0)(1,0,0)[12] with zero mean     : 1708.616
+ ARIMA(3,0,0)(1,0,0)[12] with non-zero mean : 1709.843
+ ARIMA(3,0,0)(1,0,1)[12] with zero mean     : Inf
+ ARIMA(3,0,0)(1,0,1)[12] with non-zero mean : 1711.232
+ ARIMA(3,0,0)(2,0,0)[12] with zero mean     : 1709.62
+ ARIMA(3,0,0)(2,0,0)[12] with non-zero mean : 1711.125
+ ARIMA(3,0,1)            with zero mean     : 1720.863
+ ARIMA(3,0,1)            with non-zero mean : 1721.76
+ ARIMA(3,0,1)(0,0,1)[12] with zero mean     : 1714.164
+ ARIMA(3,0,1)(0,0,1)[12] with non-zero mean : 1715.164
+ ARIMA(3,0,1)(1,0,0)[12] with zero mean     : 1710.743
+ ARIMA(3,0,1)(1,0,0)[12] with non-zero mean : 1711.997
+ ARIMA(3,0,2)            with zero mean     : 1718.083
+ ARIMA(3,0,2)            with non-zero mean : Inf
+ ARIMA(4,0,0)            with zero mean     : 1719.97
+ ARIMA(4,0,0)            with non-zero mean : 1720.62
+ ARIMA(4,0,0)(0,0,1)[12] with zero mean     : 1713.867
+ ARIMA(4,0,0)(0,0,1)[12] with non-zero mean : 1714.737
+ ARIMA(4,0,0)(1,0,0)[12] with zero mean     : 1710.577
+ ARIMA(4,0,0)(1,0,0)[12] with non-zero mean : 1711.741
+ ARIMA(4,0,1)            with zero mean     : 1720.814
+ ARIMA(4,0,1)            with non-zero mean : Inf
+ ARIMA(5,0,0)            with zero mean     : 1722.041
+ ARIMA(5,0,0)            with non-zero mean : 1722.613
 
 
 
- Best model: ARIMA(0,1,2)(1,0,0)[12]                    
+ Best model: ARIMA(0,0,2)(1,0,0)[12] with zero mean     
 
 
-Selected order: 0,1,2,1,0,0,12 
-Series: train_ts 
-ARIMA(0,1,2)(1,0,0)[12] 
+Selected order: 0,0,2,1,0,0,12 
+Series: train_diff 
+ARIMA(0,0,2)(1,0,0)[12] with zero mean 
 
 Coefficients:
          ma1      ma2    sar1
@@ -405,175 +466,244 @@ AIC=1706.35   AICc=1706.79   BIC=1716.57
 
 Training set error measures:
                    ME     RMSE      MAE MPE MAPE      MASE        ACF1
-Training set 216.0395 1808.769 1107.733 NaN  Inf 0.3416407 -0.01174362
+Training set 218.3136 1818.264 1119.394 NaN  Inf 0.7876104 -0.01186673
 
-3. Residual Diagnostics (Ljung-Box test):
+2. Residual Diagnostics (Ljung-Box test):
 
 	Ljung-Box test
 
-data:  Residuals from ARIMA(0,1,2)(1,0,0)[12]
-Q* = 24.146, df = 16, p-value = 0.08636
+data:  Residuals from ARIMA(0,0,2)(1,0,0)[12] with zero mean
+Q* = 23.941, df = 16, p-value = 0.09081
 
 Model df: 3.   Total lags used: 19
 
 
 	Ljung-Box test
 
-data:  Residuals from ARIMA(0,1,2)(1,0,0)[12]
-Q* = 24.146, df = 16, p-value = 0.08636
-
-
-	Ljung-Box test
-
-data:  Residuals from ARIMA(0,1,2)(1,0,0)[12]
-Q* = 24.146, df = 16, p-value = 0.08636
+data:  Residuals from ARIMA(0,0,2)(1,0,0)[12] with zero mean
+Q* = 23.941, df = 16, p-value = 0.09081
 
 Model df: 3.   Total lags used: 19
 
 Saved: sarima_02_residuals_3wheelers.png 
 
-4. Forecasting and Evaluation on Test Set
+3. Forecasting and Evaluation on Test Set
 
 --- Full Accuracy Matrix ---
       RMSE      MAE   MASE Theils_U       ME
 1 15191.49 12612.49 3.8899   0.5286 11606.15
 Saved: sarima_03_testforecast_3wheelers.png 
 
-5. Future Forecast (next 12 months beyond dataset):
-         Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95
-Feb 2024       54313.10 51219.62 57406.58 49582.04 59044.17
-Mar 2024       58628.54 54625.49 62631.59 52506.40 64750.67
-Apr 2024       55163.09 50376.29 59949.88 47842.32 62483.86
-May 2024       58316.11 52856.95 63775.26 49967.05 66665.16
-Jun 2024       59937.59 53880.25 65994.93 50673.69 69201.49
-Jul 2024       62677.70 56076.16 69279.24 52581.52 72773.89
-Aug 2024       64117.37 57013.20 71221.55 53252.47 74982.28
-Sep 2024       64451.34 56877.81 72024.86 52868.62 76034.05
-Oct 2024       64151.82 56136.38 72167.26 51893.26 76410.38
-Nov 2024       62691.58 54257.34 71125.81 49792.53 75590.63
-Dec 2024       64482.44 55649.24 73315.63 50973.23 77991.64
-Jan 2025       62287.76 53072.87 71502.66 48194.80 76380.73
+4. Future Forecast (next 12 months beyond dataset):
 Saved: sarima_04_futureforecast_3wheelers.png 
 
 ======================================================
-ANALYZING CATEGORY: 4-Wheelers
+ANALYZING CATEGORY (SARIMA): 4-Wheelers
 ======================================================
 
-1. Stationarity Tests on Raw Training Data:
-   ADF p-value : 0.99 ->  Non-stationary 
-   KPSS p-value: 0.01 ->  Non-stationary 
-   Suggested non-seasonal differencing (d): 2 
-   Suggested seasonal differencing (D)    : 0 
-Saved: sarima_00_acfpacf_raw_4wheelers.png 
-Saved: sarima_01_acfpacf_4wheelers.png 
+1. Fitting SARIMA Model...
 
-2. Fitting SARIMA Model...
+ ARIMA(0,0,0)            with zero mean     : 1247.054
+ ARIMA(0,0,0)            with non-zero mean : 1248.82
+ ARIMA(0,0,0)(0,0,1)[12] with zero mean     : 1247.747
+ ARIMA(0,0,0)(0,0,1)[12] with non-zero mean : 1249.565
+ ARIMA(0,0,0)(0,0,2)[12] with zero mean     : 1249.858
+ ARIMA(0,0,0)(0,0,2)[12] with non-zero mean : 1251.721
+ ARIMA(0,0,0)(1,0,0)[12] with zero mean     : 1247.857
+ ARIMA(0,0,0)(1,0,0)[12] with non-zero mean : 1249.678
+ ARIMA(0,0,0)(1,0,1)[12] with zero mean     : 1249.865
+ ARIMA(0,0,0)(1,0,1)[12] with non-zero mean : 1251.729
+ ARIMA(0,0,0)(1,0,2)[12] with zero mean     : 1251.847
+ ARIMA(0,0,0)(1,0,2)[12] with non-zero mean : 1253.716
+ ARIMA(0,0,0)(2,0,0)[12] with zero mean     : 1249.812
+ ARIMA(0,0,0)(2,0,0)[12] with non-zero mean : 1251.67
+ ARIMA(0,0,0)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,0)(2,0,1)[12] with non-zero mean : Inf
+ ARIMA(0,0,0)(2,0,2)[12] with zero mean     : Inf
+ ARIMA(0,0,0)(2,0,2)[12] with non-zero mean : 1255.909
+ ARIMA(0,0,1)            with zero mean     : 1214.472
+ ARIMA(0,0,1)            with non-zero mean : 1214.986
+ ARIMA(0,0,1)(0,0,1)[12] with zero mean     : 1213.03
+ ARIMA(0,0,1)(0,0,1)[12] with non-zero mean : 1213.682
+ ARIMA(0,0,1)(0,0,2)[12] with zero mean     : 1215.205
+ ARIMA(0,0,1)(0,0,2)[12] with non-zero mean : 1215.914
+ ARIMA(0,0,1)(1,0,0)[12] with zero mean     : 1213.345
+ ARIMA(0,0,1)(1,0,0)[12] with non-zero mean : 1214.076
+ ARIMA(0,0,1)(1,0,1)[12] with zero mean     : 1215.207
+ ARIMA(0,0,1)(1,0,1)[12] with non-zero mean : 1215.914
+ ARIMA(0,0,1)(1,0,2)[12] with zero mean     : Inf
+ ARIMA(0,0,1)(1,0,2)[12] with non-zero mean : 1217.764
+ ARIMA(0,0,1)(2,0,0)[12] with zero mean     : 1215.106
+ ARIMA(0,0,1)(2,0,0)[12] with non-zero mean : 1215.734
+ ARIMA(0,0,1)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,1)(2,0,1)[12] with non-zero mean : 1217.538
+ ARIMA(0,0,1)(2,0,2)[12] with zero mean     : Inf
+ ARIMA(0,0,1)(2,0,2)[12] with non-zero mean : 1219.873
+ ARIMA(0,0,2)            with zero mean     : 1216.161
+ ARIMA(0,0,2)            with non-zero mean : Inf
+ ARIMA(0,0,2)(0,0,1)[12] with zero mean     : 1210.608
+ ARIMA(0,0,2)(0,0,1)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)(0,0,2)[12] with zero mean     : 1212.115
+ ARIMA(0,0,2)(0,0,2)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)(1,0,0)[12] with zero mean     : 1210.878
+ ARIMA(0,0,2)(1,0,0)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)(1,0,1)[12] with zero mean     : 1212.098
+ ARIMA(0,0,2)(1,0,1)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)(1,0,2)[12] with zero mean     : 1214.358
+ ARIMA(0,0,2)(1,0,2)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)(2,0,0)[12] with zero mean     : 1211.971
+ ARIMA(0,0,2)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(0,0,2)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(0,0,2)(2,0,1)[12] with non-zero mean : 1215.263
+ ARIMA(0,0,3)            with zero mean     : 1199.484
+ ARIMA(0,0,3)            with non-zero mean : 1200.685
+ ARIMA(0,0,3)(0,0,1)[12] with zero mean     : 1195.319
+ ARIMA(0,0,3)(0,0,1)[12] with non-zero mean : 1196.72
+ ARIMA(0,0,3)(0,0,2)[12] with zero mean     : 1197.603
+ ARIMA(0,0,3)(0,0,2)[12] with non-zero mean : 1199.056
+ ARIMA(0,0,3)(1,0,0)[12] with zero mean     : 1196.558
+ ARIMA(0,0,3)(1,0,0)[12] with non-zero mean : 1197.988
+ ARIMA(0,0,3)(1,0,1)[12] with zero mean     : 1197.603
+ ARIMA(0,0,3)(1,0,1)[12] with non-zero mean : 1199.056
+ ARIMA(0,0,3)(2,0,0)[12] with zero mean     : 1197.467
+ ARIMA(0,0,3)(2,0,0)[12] with non-zero mean : 1198.859
+ ARIMA(0,0,4)            with zero mean     : 1201.602
+ ARIMA(0,0,4)            with non-zero mean : 1202.783
+ ARIMA(0,0,4)(0,0,1)[12] with zero mean     : 1194.096
+ ARIMA(0,0,4)(0,0,1)[12] with non-zero mean : 1195.128
+ ARIMA(0,0,4)(1,0,0)[12] with zero mean     : 1196.061
+ ARIMA(0,0,4)(1,0,0)[12] with non-zero mean : 1197.209
+ ARIMA(0,0,5)            with zero mean     : 1191.05
+ ARIMA(0,0,5)            with non-zero mean : 1191.749
+ ARIMA(1,0,0)            with zero mean     : 1242.707
+ ARIMA(1,0,0)            with non-zero mean : 1244.449
+ ARIMA(1,0,0)(0,0,1)[12] with zero mean     : 1242.274
+ ARIMA(1,0,0)(0,0,1)[12] with non-zero mean : 1244.068
+ ARIMA(1,0,0)(0,0,2)[12] with zero mean     : 1244.357
+ ARIMA(1,0,0)(0,0,2)[12] with non-zero mean : 1246.205
+ ARIMA(1,0,0)(1,0,0)[12] with zero mean     : 1242.233
+ ARIMA(1,0,0)(1,0,0)[12] with non-zero mean : 1244.036
+ ARIMA(1,0,0)(1,0,1)[12] with zero mean     : 1244.386
+ ARIMA(1,0,0)(1,0,1)[12] with non-zero mean : 1246.235
+ ARIMA(1,0,0)(1,0,2)[12] with zero mean     : 1246.589
+ ARIMA(1,0,0)(1,0,2)[12] with non-zero mean : 1248.488
+ ARIMA(1,0,0)(2,0,0)[12] with zero mean     : 1244.366
+ ARIMA(1,0,0)(2,0,0)[12] with non-zero mean : 1246.211
+ ARIMA(1,0,0)(2,0,1)[12] with zero mean     : 1246.331
+ ARIMA(1,0,0)(2,0,1)[12] with non-zero mean : 1248.168
+ ARIMA(1,0,0)(2,0,2)[12] with zero mean     : Inf
+ ARIMA(1,0,0)(2,0,2)[12] with non-zero mean : Inf
+ ARIMA(1,0,1)            with zero mean     : 1216.579
+ ARIMA(1,0,1)            with non-zero mean : 1217.14
+ ARIMA(1,0,1)(0,0,1)[12] with zero mean     : 1215.119
+ ARIMA(1,0,1)(0,0,1)[12] with non-zero mean : 1215.823
+ ARIMA(1,0,1)(0,0,2)[12] with zero mean     : 1217.332
+ ARIMA(1,0,1)(0,0,2)[12] with non-zero mean : 1218.101
+ ARIMA(1,0,1)(1,0,0)[12] with zero mean     : 1215.427
+ ARIMA(1,0,1)(1,0,0)[12] with non-zero mean : 1216.218
+ ARIMA(1,0,1)(1,0,1)[12] with zero mean     : 1217.336
+ ARIMA(1,0,1)(1,0,1)[12] with non-zero mean : Inf
+ ARIMA(1,0,1)(1,0,2)[12] with zero mean     : 1219.611
+ ARIMA(1,0,1)(1,0,2)[12] with non-zero mean : Inf
+ ARIMA(1,0,1)(2,0,0)[12] with zero mean     : Inf
+ ARIMA(1,0,1)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(1,0,1)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(1,0,1)(2,0,1)[12] with non-zero mean : Inf
+ ARIMA(1,0,2)            with zero mean     : 1212.085
+ ARIMA(1,0,2)            with non-zero mean : 1212.672
+ ARIMA(1,0,2)(0,0,1)[12] with zero mean     : 1211.084
+ ARIMA(1,0,2)(0,0,1)[12] with non-zero mean : 1211.814
+ ARIMA(1,0,2)(0,0,2)[12] with zero mean     : 1213.358
+ ARIMA(1,0,2)(0,0,2)[12] with non-zero mean : 1214.123
+ ARIMA(1,0,2)(1,0,0)[12] with zero mean     : 1211.55
+ ARIMA(1,0,2)(1,0,0)[12] with non-zero mean : 1212.351
+ ARIMA(1,0,2)(1,0,1)[12] with zero mean     : 1213.36
+ ARIMA(1,0,2)(1,0,1)[12] with non-zero mean : 1214.132
+ ARIMA(1,0,2)(2,0,0)[12] with zero mean     : 1213.259
+ ARIMA(1,0,2)(2,0,0)[12] with non-zero mean : Inf
+ ARIMA(1,0,3)            with zero mean     : 1201.673
+ ARIMA(1,0,3)            with non-zero mean : 1202.899
+ ARIMA(1,0,3)(0,0,1)[12] with zero mean     : 1196.774
+ ARIMA(1,0,3)(0,0,1)[12] with non-zero mean : 1198.166
+ ARIMA(1,0,3)(1,0,0)[12] with zero mean     : 1198.087
+ ARIMA(1,0,3)(1,0,0)[12] with non-zero mean : 1199.522
+ ARIMA(1,0,4)            with zero mean     : 1203.111
+ ARIMA(1,0,4)            with non-zero mean : 1204.481
+ ARIMA(2,0,0)            with zero mean     : 1216.777
+ ARIMA(2,0,0)            with non-zero mean : 1218.329
+ ARIMA(2,0,0)(0,0,1)[12] with zero mean     : 1214.018
+ ARIMA(2,0,0)(0,0,1)[12] with non-zero mean : 1215.647
+ ARIMA(2,0,0)(0,0,2)[12] with zero mean     : 1216.241
+ ARIMA(2,0,0)(0,0,2)[12] with non-zero mean : 1217.918
+ ARIMA(2,0,0)(1,0,0)[12] with zero mean     : 1214.88
+ ARIMA(2,0,0)(1,0,0)[12] with non-zero mean : 1216.532
+ ARIMA(2,0,0)(1,0,1)[12] with zero mean     : 1216.243
+ ARIMA(2,0,0)(1,0,1)[12] with non-zero mean : 1217.921
+ ARIMA(2,0,0)(1,0,2)[12] with zero mean     : 1218.367
+ ARIMA(2,0,0)(1,0,2)[12] with non-zero mean : 1220.007
+ ARIMA(2,0,0)(2,0,0)[12] with zero mean     : 1216.107
+ ARIMA(2,0,0)(2,0,0)[12] with non-zero mean : 1217.751
+ ARIMA(2,0,0)(2,0,1)[12] with zero mean     : Inf
+ ARIMA(2,0,0)(2,0,1)[12] with non-zero mean : Inf
+ ARIMA(2,0,1)            with zero mean     : 1203.665
+ ARIMA(2,0,1)            with non-zero mean : 1204.223
+ ARIMA(2,0,1)(0,0,1)[12] with zero mean     : 1201.315
+ ARIMA(2,0,1)(0,0,1)[12] with non-zero mean : 1202.044
+ ARIMA(2,0,1)(0,0,2)[12] with zero mean     : 1203.591
+ ARIMA(2,0,1)(0,0,2)[12] with non-zero mean : 1204.359
+ ARIMA(2,0,1)(1,0,0)[12] with zero mean     : 1202.654
+ ARIMA(2,0,1)(1,0,0)[12] with non-zero mean : 1203.461
+ ARIMA(2,0,1)(1,0,1)[12] with zero mean     : 1203.593
+ ARIMA(2,0,1)(1,0,1)[12] with non-zero mean : 1204.367
+ ARIMA(2,0,1)(2,0,0)[12] with zero mean     : 1203.337
+ ARIMA(2,0,1)(2,0,0)[12] with non-zero mean : 1203.947
+ ARIMA(2,0,2)            with zero mean     : 1205.905
+ ARIMA(2,0,2)            with non-zero mean : 1206.523
+ ARIMA(2,0,2)(0,0,1)[12] with zero mean     : 1202.818
+ ARIMA(2,0,2)(0,0,1)[12] with non-zero mean : 1203.61
+ ARIMA(2,0,2)(1,0,0)[12] with zero mean     : 1203.919
+ ARIMA(2,0,2)(1,0,0)[12] with non-zero mean : 1204.811
+ ARIMA(2,0,3)            with zero mean     : 1191.989
+ ARIMA(2,0,3)            with non-zero mean : 1193.01
+ ARIMA(3,0,0)            with zero mean     : 1215.786
+ ARIMA(3,0,0)            with non-zero mean : 1217.266
+ ARIMA(3,0,0)(0,0,1)[12] with zero mean     : 1213.661
+ ARIMA(3,0,0)(0,0,1)[12] with non-zero mean : 1215.242
+ ARIMA(3,0,0)(0,0,2)[12] with zero mean     : 1215.874
+ ARIMA(3,0,0)(0,0,2)[12] with non-zero mean : 1217.491
+ ARIMA(3,0,0)(1,0,0)[12] with zero mean     : 1214.818
+ ARIMA(3,0,0)(1,0,0)[12] with non-zero mean : 1216.428
+ ARIMA(3,0,0)(1,0,1)[12] with zero mean     : 1215.897
+ ARIMA(3,0,0)(1,0,1)[12] with non-zero mean : 1217.521
+ ARIMA(3,0,0)(2,0,0)[12] with zero mean     : 1215.696
+ ARIMA(3,0,0)(2,0,0)[12] with non-zero mean : 1217.262
+ ARIMA(3,0,1)            with zero mean     : 1205.707
+ ARIMA(3,0,1)            with non-zero mean : 1206.316
+ ARIMA(3,0,1)(0,0,1)[12] with zero mean     : 1203.521
+ ARIMA(3,0,1)(0,0,1)[12] with non-zero mean : 1204.299
+ ARIMA(3,0,1)(1,0,0)[12] with zero mean     : 1204.871
+ ARIMA(3,0,1)(1,0,0)[12] with non-zero mean : 1205.725
+ ARIMA(3,0,2)            with zero mean     : 1207.065
+ ARIMA(3,0,2)            with non-zero mean : 1207.725
+ ARIMA(4,0,0)            with zero mean     : 1195.178
+ ARIMA(4,0,0)            with non-zero mean : 1196.198
+ ARIMA(4,0,0)(0,0,1)[12] with zero mean     : 1188.927
+ ARIMA(4,0,0)(0,0,1)[12] with non-zero mean : 1190.012
+ ARIMA(4,0,0)(1,0,0)[12] with zero mean     : 1190.365
+ ARIMA(4,0,0)(1,0,0)[12] with non-zero mean : 1191.571
+ ARIMA(4,0,1)            with zero mean     : 1193.786
+ ARIMA(4,0,1)            with non-zero mean : 1194.386
+ ARIMA(5,0,0)            with zero mean     : 1190.922
+ ARIMA(5,0,0)            with non-zero mean : 1191.406
 
- ARIMA(0,2,0)                               : 1247.054
- ARIMA(0,2,0)(0,0,1)[12]                    : 1247.747
- ARIMA(0,2,0)(0,0,2)[12]                    : 1249.858
- ARIMA(0,2,0)(1,0,0)[12]                    : 1247.857
- ARIMA(0,2,0)(1,0,1)[12]                    : 1249.865
- ARIMA(0,2,0)(1,0,2)[12]                    : 1251.847
- ARIMA(0,2,0)(2,0,0)[12]                    : 1249.812
- ARIMA(0,2,0)(2,0,1)[12]                    : Inf
- ARIMA(0,2,0)(2,0,2)[12]                    : Inf
- ARIMA(0,2,1)                               : 1214.472
- ARIMA(0,2,1)(0,0,1)[12]                    : 1213.03
- ARIMA(0,2,1)(0,0,2)[12]                    : 1215.205
- ARIMA(0,2,1)(1,0,0)[12]                    : 1213.345
- ARIMA(0,2,1)(1,0,1)[12]                    : 1215.207
- ARIMA(0,2,1)(1,0,2)[12]                    : Inf
- ARIMA(0,2,1)(2,0,0)[12]                    : 1215.106
- ARIMA(0,2,1)(2,0,1)[12]                    : Inf
- ARIMA(0,2,1)(2,0,2)[12]                    : Inf
- ARIMA(0,2,2)                               : 1216.161
- ARIMA(0,2,2)(0,0,1)[12]                    : 1210.608
- ARIMA(0,2,2)(0,0,2)[12]                    : 1212.115
- ARIMA(0,2,2)(1,0,0)[12]                    : 1210.878
- ARIMA(0,2,2)(1,0,1)[12]                    : 1212.098
- ARIMA(0,2,2)(1,0,2)[12]                    : 1214.358
- ARIMA(0,2,2)(2,0,0)[12]                    : 1211.971
- ARIMA(0,2,2)(2,0,1)[12]                    : Inf
- ARIMA(0,2,3)                               : 1199.484
- ARIMA(0,2,3)(0,0,1)[12]                    : 1195.319
- ARIMA(0,2,3)(0,0,2)[12]                    : 1197.603
- ARIMA(0,2,3)(1,0,0)[12]                    : 1196.558
- ARIMA(0,2,3)(1,0,1)[12]                    : 1197.603
- ARIMA(0,2,3)(2,0,0)[12]                    : 1197.467
- ARIMA(0,2,4)                               : 1201.602
- ARIMA(0,2,4)(0,0,1)[12]                    : 1194.096
- ARIMA(0,2,4)(1,0,0)[12]                    : 1196.061
- ARIMA(0,2,5)                               : 1191.05
- ARIMA(1,2,0)                               : 1242.707
- ARIMA(1,2,0)(0,0,1)[12]                    : 1242.274
- ARIMA(1,2,0)(0,0,2)[12]                    : 1244.357
- ARIMA(1,2,0)(1,0,0)[12]                    : 1242.233
- ARIMA(1,2,0)(1,0,1)[12]                    : 1244.386
- ARIMA(1,2,0)(1,0,2)[12]                    : 1246.589
- ARIMA(1,2,0)(2,0,0)[12]                    : 1244.366
- ARIMA(1,2,0)(2,0,1)[12]                    : 1246.331
- ARIMA(1,2,0)(2,0,2)[12]                    : Inf
- ARIMA(1,2,1)                               : 1216.579
- ARIMA(1,2,1)(0,0,1)[12]                    : 1215.119
- ARIMA(1,2,1)(0,0,2)[12]                    : 1217.332
- ARIMA(1,2,1)(1,0,0)[12]                    : 1215.427
- ARIMA(1,2,1)(1,0,1)[12]                    : 1217.335
- ARIMA(1,2,1)(1,0,2)[12]                    : 1219.611
- ARIMA(1,2,1)(2,0,0)[12]                    : Inf
- ARIMA(1,2,1)(2,0,1)[12]                    : Inf
- ARIMA(1,2,2)                               : 1212.085
- ARIMA(1,2,2)(0,0,1)[12]                    : 1211.084
- ARIMA(1,2,2)(0,0,2)[12]                    : 1213.358
- ARIMA(1,2,2)(1,0,0)[12]                    : 1211.55
- ARIMA(1,2,2)(1,0,1)[12]                    : 1213.36
- ARIMA(1,2,2)(2,0,0)[12]                    : 1213.259
- ARIMA(1,2,3)                               : 1201.673
- ARIMA(1,2,3)(0,0,1)[12]                    : 1196.774
- ARIMA(1,2,3)(1,0,0)[12]                    : 1198.087
- ARIMA(1,2,4)                               : 1203.111
- ARIMA(2,2,0)                               : 1216.777
- ARIMA(2,2,0)(0,0,1)[12]                    : 1214.018
- ARIMA(2,2,0)(0,0,2)[12]                    : 1216.241
- ARIMA(2,2,0)(1,0,0)[12]                    : 1214.88
- ARIMA(2,2,0)(1,0,1)[12]                    : 1216.243
- ARIMA(2,2,0)(1,0,2)[12]                    : 1218.367
- ARIMA(2,2,0)(2,0,0)[12]                    : 1216.107
- ARIMA(2,2,0)(2,0,1)[12]                    : Inf
- ARIMA(2,2,1)                               : 1203.664
- ARIMA(2,2,1)(0,0,1)[12]                    : 1201.315
- ARIMA(2,2,1)(0,0,2)[12]                    : 1203.591
- ARIMA(2,2,1)(1,0,0)[12]                    : 1202.653
- ARIMA(2,2,1)(1,0,1)[12]                    : 1203.593
- ARIMA(2,2,1)(2,0,0)[12]                    : 1203.337
- ARIMA(2,2,2)                               : 1205.905
- ARIMA(2,2,2)(0,0,1)[12]                    : 1202.818
- ARIMA(2,2,2)(1,0,0)[12]                    : 1203.919
- ARIMA(2,2,3)                               : 1191.989
- ARIMA(3,2,0)                               : 1215.786
- ARIMA(3,2,0)(0,0,1)[12]                    : 1213.661
- ARIMA(3,2,0)(0,0,2)[12]                    : 1215.874
- ARIMA(3,2,0)(1,0,0)[12]                    : 1214.818
- ARIMA(3,2,0)(1,0,1)[12]                    : 1215.897
- ARIMA(3,2,0)(2,0,0)[12]                    : 1215.696
- ARIMA(3,2,1)                               : 1205.707
- ARIMA(3,2,1)(0,0,1)[12]                    : 1203.521
- ARIMA(3,2,1)(1,0,0)[12]                    : 1204.871
- ARIMA(3,2,2)                               : 1207.065
- ARIMA(4,2,0)                               : 1195.178
- ARIMA(4,2,0)(0,0,1)[12]                    : 1188.927
- ARIMA(4,2,0)(1,0,0)[12]                    : 1190.365
- ARIMA(4,2,1)                               : 1193.786
- ARIMA(5,2,0)                               : 1190.922
 
 
+ Best model: ARIMA(4,0,0)(0,0,1)[12] with zero mean     
 
- Best model: ARIMA(4,2,0)(0,0,1)[12]                    
 
-
-Selected order: 4,2,0,0,0,1,12 
-Series: train_ts 
-ARIMA(4,2,0)(0,0,1)[12] 
+Selected order: 4,0,0,0,0,1,12 
+Series: train_diff 
+ARIMA(4,0,0)(0,0,1)[12] with zero mean 
 
 Coefficients:
           ar1      ar2      ar3      ar4    sma1
@@ -584,59 +714,38 @@ sigma^2 = 15833:  log likelihood = -587.98
 AIC=1187.96   AICc=1188.93   BIC=1203.22
 
 Training set error measures:
-                   ME     RMSE      MAE      MPE     MAPE      MASE       ACF1
-Training set 14.07452 121.1549 74.05341 -137.674 179.0395 0.4448925 -0.1570766
+                   ME    RMSE      MAE       MPE     MAPE     MASE       ACF1
+Training set 14.37454 122.437 75.62813 -33.98868 206.8922 0.571831 -0.1571115
 
-3. Residual Diagnostics (Ljung-Box test):
+2. Residual Diagnostics (Ljung-Box test):
 
 	Ljung-Box test
 
-data:  Residuals from ARIMA(4,2,0)(0,0,1)[12]
-Q* = 18.892, df = 14, p-value = 0.1691
+data:  Residuals from ARIMA(4,0,0)(0,0,1)[12] with zero mean
+Q* = 18.545, df = 14, p-value = 0.1831
 
 Model df: 5.   Total lags used: 19
 
 
 	Ljung-Box test
 
-data:  Residuals from ARIMA(4,2,0)(0,0,1)[12]
-Q* = 18.892, df = 14, p-value = 0.1691
-
-
-	Ljung-Box test
-
-data:  Residuals from ARIMA(4,2,0)(0,0,1)[12]
-Q* = 18.892, df = 14, p-value = 0.1691
+data:  Residuals from ARIMA(4,0,0)(0,0,1)[12] with zero mean
+Q* = 18.545, df = 14, p-value = 0.1831
 
 Model df: 5.   Total lags used: 19
 
 Saved: sarima_02_residuals_4wheelers.png 
 
-4. Forecasting and Evaluation on Test Set
+3. Forecasting and Evaluation on Test Set
 
 --- Full Accuracy Matrix ---
-      RMSE      MAE    MASE Theils_U      ME
-1 2516.359 2149.209 12.9119   0.5579 -2028.2
+      RMSE      MAE    MASE Theils_U       ME
+1 3667.862 3053.746 18.3461   0.8132 3042.883
 Saved: sarima_03_testforecast_4wheelers.png 
 
-5. Future Forecast (next 12 months beyond dataset):
-         Point Forecast     Lo 80     Hi 80     Lo 95     Hi 95
-Feb 2024       8532.218  7887.393  9177.044  7546.043  9518.394
-Mar 2024      11508.428 10657.222 12359.633 10206.621 12810.234
-Apr 2024      10547.924  9436.152 11659.696  8847.615 12248.232
-May 2024      11673.124 10237.646 13108.602  9477.750 13868.498
-Jun 2024      12180.619 10389.958 13971.279  9442.040 14919.198
-Jul 2024      12295.687 10088.226 14503.149  8919.666 15671.708
-Aug 2024      12278.982  9670.004 14887.961  8288.894 16269.071
-Sep 2024      12158.102  9106.456 15209.748  7491.012 16825.192
-Oct 2024      13228.817  9708.034 16749.600  7844.244 18613.390
-Nov 2024      13522.369  9513.281 17531.458  7390.998 19653.741
-Dec 2024      14484.009  9962.694 19005.325  7569.254 21398.765
-Jan 2025      15272.679 10223.603 20321.755  7550.783 22994.575
+4. Future Forecast (next 12 months beyond dataset):
 Saved: sarima_04_futureforecast_4wheelers.png 
-
-Cross-Category Model Performance Comparison (SARIMA)
     Category      RMSE       MAE    MASE Theils_U        ME  Model
-1 2-Wheelers 29056.763 21525.755 10.2389   0.5495 -14267.84 SARIMA
-2 3-Wheelers 15191.495 12612.487  3.8899   0.5286  11606.15 SARIMA
-3 4-Wheelers  2516.359  2149.209 12.9119   0.5579  -2028.20 SARIMA
+1 2-Wheelers 38031.721 33876.109 16.1135   0.7192 33876.109 SARIMA
+2 3-Wheelers 15191.495 12612.487  3.8899   0.5286 11606.155 SARIMA
+3 4-Wheelers  3667.862  3053.746 18.3461   0.8132  3042.883 SARIMA

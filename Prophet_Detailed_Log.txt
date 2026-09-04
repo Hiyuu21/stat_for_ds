@@ -1,36 +1,40 @@
 
 =========================================
-ANALYZING CATEGORY: 2-Wheelers
-=========================================
-
---- Test Set Metrics ---
-     RMSE      MAE    MASE Theils_U       ME
-1 34990.2 32112.28 15.2745   0.6617 32112.28
-Saved: prophet_01_testforecast_2wheelers.png 
-Saved: prophet_02_futureforecast_2wheelers.png 
-
-=========================================
-ANALYZING CATEGORY: 3-Wheelers
-=========================================
-
---- Test Set Metrics ---
-     RMSE      MAE   MASE Theils_U       ME
-1 20365.7 18251.72 5.6291   0.7086 18251.72
-Saved: prophet_01_testforecast_3wheelers.png 
-Saved: prophet_02_futureforecast_3wheelers.png 
-
-=========================================
-ANALYZING CATEGORY: 4-Wheelers
+ANALYZING CATEGORY (PROPHET): 2-Wheelers
 =========================================
 
 --- Test Set Metrics ---
       RMSE      MAE    MASE Theils_U       ME
-1 3171.365 2679.153 16.0956   0.7031 2678.886
-Saved: prophet_01_testforecast_4wheelers.png 
-Saved: prophet_02_futureforecast_4wheelers.png 
+1 38704.97 34688.49 16.4999   0.7319 34688.49
+Saved: prophet_01_testforecast_2wheelers.png 
 
---- Cross-Category Model Performance Comparison (Prophet) ---
-    Category      RMSE       MAE    MASE Theils_U        ME   Model
-1 2-Wheelers 34990.198 32112.281 15.2745   0.6617 32112.281 Prophet
-2 3-Wheelers 20365.697 18251.723  5.6291   0.7086 18251.723 Prophet
-3 4-Wheelers  3171.365  2679.153 16.0956   0.7031  2678.886 Prophet
+5. Refitting Prophet on Full Dataset and Forecasting Future...
+Saved: prophet_02_futureforecast_2wheelers.png 
+
+=========================================
+ANALYZING CATEGORY (PROPHET): 3-Wheelers
+=========================================
+
+--- Test Set Metrics ---
+      RMSE      MAE   MASE Theils_U        ME
+1 10915.37 9057.539 2.7935   0.3798 -9057.539
+Saved: prophet_01_testforecast_3wheelers.png 
+
+5. Refitting Prophet on Full Dataset and Forecasting Future...
+Saved: prophet_02_futureforecast_3wheelers.png 
+
+=========================================
+ANALYZING CATEGORY (PROPHET): 4-Wheelers
+=========================================
+
+--- Test Set Metrics ---
+      RMSE      MAE   MASE Theils_U       ME
+1 1597.526 1136.056 6.8251   0.3542 872.4273
+Saved: prophet_01_testforecast_4wheelers.png 
+
+5. Refitting Prophet on Full Dataset and Forecasting Future...
+Saved: prophet_02_futureforecast_4wheelers.png 
+    Category      RMSE       MAE    MASE Theils_U         ME   Model
+1 2-Wheelers 38704.971 34688.488 16.4999   0.7319 34688.4875 Prophet
+2 3-Wheelers 10915.371  9057.539  2.7935   0.3798 -9057.5388 Prophet
+3 4-Wheelers  1597.526  1136.056  6.8251   0.3542   872.4273 Prophet
